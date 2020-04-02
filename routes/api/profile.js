@@ -6,6 +6,7 @@ const { check, validationResult } = require('express-validator/check');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
+
 // get current user profile
 
 router.get('/me', auth, async (req, res) => {
@@ -287,5 +288,6 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
         res.status(500).send('Server Error')
     }
 })
+
 
 module.exports = router;
