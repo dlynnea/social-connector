@@ -137,7 +137,7 @@ img {
     margin-bottom: 1rem;
 }
 
-.large {
+.lg {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -152,12 +152,12 @@ img {
     text-align: center;
 }
 
-.text-primary {
+.primary-txt {
     color: $primary-color;
 }
 
-.text-dark {
-    color: var(--dark-color);
+.dark-txt {
+    color: $dark-color;
 }
 
 /* Utilities */
@@ -252,55 +252,6 @@ img {
     color: #333;
   }
   
-  .btn-primary,
-  .bg-primary,
-  .badge-primary,
-  .alert-primary {
-    background: $primary-color;
-    color: #fff;
-  }
-  
-  .btn-light,
-  .bg-light,
-  .badge-light,
-  .alert-light {
-    background: $backlight;
-    color: #333;
-  }
-  
-  .btn-dark,
-  .bg-dark,
-  .badge-dark,
-  .alert-dark {
-    background: var(--dark-color);
-    color: #fff;
-  }
-  
-  .btn-danger,
-  .bg-danger,
-  .badge-danger,
-  .alert-danger {
-    background: var(--danger-color);
-    color: #fff;
-  }
-  
-  .btn-success,
-  .bg-success,
-  .badge-success,
-  .alert-success {
-    background: var(--success-color);
-    color: #fff;
-  }
-  
-  .btn-white,
-  .bg-white,
-  .badge-white,
-  .alert-white {
-    background: #fff;
-    color: #333;
-    border: #ccc solid 1px;
-  }
-  
   .btn:hover {
     opacity: 0.8;
   }
@@ -331,11 +282,11 @@ img {
   }
   
   /* Forms */
-  .form .form-group {
+  .form .form-input {
     margin: 1.2rem 0;
   }
   
-  .form .form-text {
+  .form .form-note {
     display: block;
     margin-top: 0.3rem;
     color: #888;
