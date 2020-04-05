@@ -59,7 +59,7 @@ const Register = ({ setAlert, register }) => {
                     onChange={event => onChange(event)}
                     name="password"
                     requried
-                    minLength="4" />
+                    minLength="6" />
                 </div>
                 <div className="form-input">
                     <input 

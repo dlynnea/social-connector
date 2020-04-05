@@ -8,7 +8,7 @@ app.use(express.json({ extended: false }))
 
 app.use((req, res, next)=>{
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "x-auth-token Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Headers", "x-auth-token, Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
