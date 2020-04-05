@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUserProfile } from '../../actions/profile';
 import Wheel from '../layout/Wheel'
+import Actions from './Actions';
 
 const Dashboard = ({ getUserProfile, auth: { user }, profile: {profile, loading} }) => {
     useEffect(() => {
@@ -16,7 +17,9 @@ const Dashboard = ({ getUserProfile, auth: { user }, profile: {profile, loading}
             Welcome { user && user.name }
         </p>
         {profile !== null 
-        ? (<Fragment>profile</Fragment>) 
+        ? (<Fragment>
+            <Actions />
+        </Fragment>) 
         : (
         <Fragment>
             <p>You currently have no profile, go ahead and set one up here:</p>
