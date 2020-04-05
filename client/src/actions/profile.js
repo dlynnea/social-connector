@@ -158,7 +158,7 @@ export const deleteEducation = id => async dispatch => {
 export const deleteProfile = id => async dispatch => {
     if(window.confirm('Are you sure you want to delete your profile?')) {
         try {
-            const res = await axios.delete(`api/profile`);
+            await axios.delete(`api/profile`);
             dispatch({
                 type: CLEAR_PROFILE,
             });

@@ -11,7 +11,7 @@ import Education from './Education';
 const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {profile, loading} }) => {
     useEffect(() => {
         getUserProfile();
-    }, []);
+    }, [getUserProfile]);
 
     return loading && profile === null ? <Wheel /> : <Fragment>
         <h1 className="lg primary-txt">Dashboard</h1>
@@ -32,9 +32,9 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
         </Fragment>) 
         : (
         <Fragment>
-            <p>You currently have no profile, go ahead and set one up here:</p>
+            <p>Click below to set up your profile</p>
             <Link to='/create-profile'className="btn btn-primary my-1">
-                Create a Profile
+                Create Profile
             </Link>
         </Fragment> 
         )}
