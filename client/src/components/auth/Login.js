@@ -23,18 +23,13 @@ const Login = ({ login }) => {
         <Fragment>
         <h1 className="lg primary-txt">Login</h1>
         <p className="lead">Login Here</p>
-        <form className="form">
-            <div className="form-input">
-                <input 
-                type="text" 
-                placeholder="Name"
-                name="name"
-                requried />
-            </div>
+        <form className="form" onSubmit={e => onSubmit(e)}>
             <div className="form-input">
                 <input 
                 type="email" 
                 placeholder="Email"
+                value={email}
+                onChange={event => onChange(event)}
                 name="email"
                 requried />
             </div>
@@ -43,8 +38,10 @@ const Login = ({ login }) => {
                 type="password" 
                 placeholder="Password"
                 name="password"
+                value={password}
+                onChange={event => onChange(event)}
                 requried
-                minLength="4" />
+                minLength="6" />
             </div>
             <input type="submit" className="btn btn-primary" value="Login" />
         </form>
@@ -53,7 +50,7 @@ const Login = ({ login }) => {
     )
 }
 
-Login.PropTypes = {
+Login.propTypes = {
     login: PropTypes.func.isRequired,
 }
 
