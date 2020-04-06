@@ -49,15 +49,20 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth, match }) =
                             </div>
                             <div className="profile-edu bg-white p-2">
                                 <h2 className="primary-txt">Education</h2>
-                                {profile.education.length > 0 ? (<Fragment>
+                                {profile.education.length > 0 
+                                ? (<Fragment>
                                     {profile.education.map(education => (
                                         <Education 
                                         key={education._id} 
                                         education={education} 
                                         />
                                     ))}
-                                </Fragment>) : (<h4>no education listed</h4>)}
+                                </Fragment>
+                                ) : (
+                                <h4>no education listed</h4>
+                                )}
                             </div>
+                            
                             {profile.githubusername && (
                                 <Github username={profile.githubusername} />
                             )}
