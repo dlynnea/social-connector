@@ -22,7 +22,7 @@ const ProfileItem = ({ profile: {
             <ul>
                 {skills.slice(0, 4).map((skill, index) => (
                     <li key={index} className="primary-txt">
-                        <i className="fas fa-check"> skill</i>
+                        <i className="fas fa-check"> {skill}</i>
                     </li>
                 ))}
             </ul>
