@@ -43,7 +43,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     value={name}
                     onChange={event => onChange(event)}
                     name="name"
-                    requried />
+                    required />
                 </div>
                 <div className="form-input">
                     <input 
@@ -52,7 +52,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     value={email}
                     onChange={event => onChange(event)}
                     name="email"
-                    requried />
+                    required />
                 </div>
                 <div className="form-input">
                     <input 
@@ -61,7 +61,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     value={password}
                     onChange={event => onChange(event)}
                     name="password"
-                    requried
+                    required
                     minLength="6" />
                 </div>
                 <div className="form-input">
@@ -71,7 +71,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     value={password2}
                     onChange={event => onChange(event)}
                     name="password2"
-                    requried
+                    required
                     minLength="4" />
                 </div>
                 <input type="submit" className="btn btn-primary" value="Register" />

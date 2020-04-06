@@ -35,7 +35,7 @@ const Login = ({ login, isAuthenticated }) => {
                 value={email}
                 onChange={event => onChange(event)}
                 name="email"
-                requried />
+                required />
             </div>
             <div className="form-input">
                 <input 
@@ -44,7 +44,7 @@ const Login = ({ login, isAuthenticated }) => {
                 name="password"
                 value={password}
                 onChange={event => onChange(event)}
-                requried
+                required
                 minLength="6" />
             </div>
             <input type="submit" className="btn btn-primary" value="Login" />
