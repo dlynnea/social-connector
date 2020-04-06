@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Wheel from '../layout/Wheel';
 import { getProfileById } from '../../actions/profile';
 import ProfileHeader from './ProfileHeader';
@@ -13,28 +13,27 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth, match }) =
 
     return (
         <Fragment>
-            {profile === null 
-            || loading 
+            { profile === null || loading 
             ? (
             <Wheel /> 
-            ) : (
+            ) 
+            : (
                 <Fragment>
                     <Link to='/profiles' className="btn btn-light">
                         Back
                     </Link>
-                    )}
                     {auth.isAuthenticated && 
                         auth.loading === false && 
-                        auth.user._id === profile.use._id && (
+                        auth.user._id === profile.user._id && (
                         <Link to='/edit-profile' className="btn btn-dark">
                             Edit Profile
                         </Link>
-                        )}
+                    )}
                     <div className="profile-grid my-1">
                         <ProfileHeader profile={profile} />
                     </div>
                 </Fragment> 
-                )}
+            )}
         </Fragment>
     )
 };
