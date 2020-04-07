@@ -6,12 +6,24 @@
   padding: 0;
 }
 
+html, body, #root, #root > div {
+  height: 100%
+}
+
+#root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
 body {
   font-family: $main-font;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: $light-green;
   color: #333;
+  height: 100%;
 }
 
 a {
@@ -89,7 +101,7 @@ img {
     width: 100%;
     height: 70px;
     top: 0;
-    background-color: rgba(168, 98, 98, 0.8);
+    background-color: $primary-color;
     border-bottom: solid 1px var($primary-color);
     opacity: 0.9;
 }
@@ -164,6 +176,18 @@ img {
 
 /* Utilities */
 .container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    // margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1100px;
     margin: auto;
     overflow: hidden;
@@ -286,7 +310,7 @@ img {
 
 .form .form-input {
   margin: 1.2rem 0;
-  width: 500px;
+  width: 320px;
 }
 
 .form .form-note {
@@ -308,6 +332,10 @@ img {
   border: 1px solid #ccc;
 }
 
+.form input[type='submit'] {
+  font: inherit;
+  width: 320px;
+}
 .form input[type='submit'],
 button {
   font: inherit;
@@ -360,8 +388,6 @@ button {
   margin-bottom: 1rem;
 }
 
-
-
 /* Profile Page */
 .profile-grid {
   display: grid;
@@ -373,7 +399,7 @@ button {
   grid-gap: 1rem;
 }
 
-.profile-top {
+.profile-header {
   grid-area: top;
   display: flex;
   flex-direction: column;
@@ -382,16 +408,16 @@ button {
   text-align: center;
 }
 
-.profile-top img {
+.profile-header img {
   width: 250px;
 }
 
-.profile-top .icons a {
+.profile-header .icons a {
   color: #fff;
   margin: 0 0.3rem;
 }
 
-.profile-top .icons a:hover {
+.profile-header .icons a:hover {
   color: var(--dark-color);
 }
 

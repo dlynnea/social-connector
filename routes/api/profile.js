@@ -58,7 +58,19 @@ router.post('/', [ auth, [
         facebook
     } = req.body;
 
-    const profileFields = {};
+    // const profileFields = {
+    //     user: req.user.id,
+    //     company,
+    //     location,
+    //     website: website === '' ? '' : normalize(website, { forceHttps: true }),
+    //     bio,
+    //     skills: Array.isArray(skills)
+    //       ? skills
+    //       : skills.split(',').map(skill => ' ' + skill.trim()),
+    //     status,
+    //     githubusername
+    // };
+
     profileFields.user = req.user.id;
 
     if(company) profileFields.company = company;
@@ -77,7 +89,29 @@ router.post('/', [ auth, [
     if(linkedin) profileFields.social.linkedin = linkedin;
     if(instagram) profileFields.social.instagram = instagram;
     if(facebook) profileFields.social.facebook = facebook;
-        
+//     const socialfields = { youtube, twitter, instagram, linkedin, facebook };
+
+//     for (const [key, value] of Object.entries(socialfields)) {
+//       if (value.length > 0)
+//         socialfields[key] = normalize(value, { forceHttps: true });
+//     }
+//     profileFields.social = socialfields;
+
+//     try {
+//         // Using upsert option (creates new doc if no match is found):
+//         let profile = await Profile.findOneAndUpdate(
+//           { user: req.user.id },
+//           { $set: profileFields },
+//           { new: true, upsert: true }
+//         );
+//         res.json(profile);
+//       } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server Error');
+//       }
+//     }
+// );    
+
     try {
         let profile = await Profile.findOne({ user: req.user.id });
         if (profile) {
@@ -97,6 +131,7 @@ router.post('/', [ auth, [
         res.status(500).send('Server error')
     }
 })
+
 
 //get all profiles 
 
