@@ -76,8 +76,6 @@ export const getGithub = (username) => async dispatch => {
 };
 
 
-
-
 export const createProfile = (formData, history, edit = false) => async dispatch => {
     try {
         const config = {
@@ -178,7 +176,7 @@ export const addEducation = (formData, history) => async dispatch => {
 
 export const deleteExperience = id => async dispatch => {
     try {
-        const res = await axios.delete(`api/profile/experience/${id}`);
+        const res = await axios.delete(`/api/profile/experience/${id}`);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -195,7 +193,7 @@ export const deleteExperience = id => async dispatch => {
 
 export const deleteEducation = id => async dispatch => {
     try {
-        const res = await axios.delete(`api/profile/education/${id}`);
+        const res = await axios.delete(`/api/profile/education/${id}`);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -213,7 +211,7 @@ export const deleteEducation = id => async dispatch => {
 export const deleteProfile = id => async dispatch => {
     if(window.confirm('Are you sure you want to delete your profile?')) {
         try {
-            await axios.delete(`api/profile`);
+            await axios.delete(`/api/profile`);
             dispatch({
                 type: CLEAR_PROFILE,
             });
