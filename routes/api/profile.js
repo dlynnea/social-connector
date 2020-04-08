@@ -10,7 +10,6 @@ const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
 
-
 // get current user profile
 
 router.get('/me', auth, async (req, res) => {
