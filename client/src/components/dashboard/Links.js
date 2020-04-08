@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Actions = () => {
+const Links = () => {
     return (
         <div className="profile-btns">
             <Link to="/edit-profile" className="btn btn-light">
-                Edit Your Profile
+                Edit Profile
             </Link>
             <Link to="/add-education" className="btn btn-light">
-                Add Education
+            <i class="fas fa-plus"></i> Education
             </Link>
             <Link to="/add-experience" className="btn btn-light">
-                Add Experience
+            <i class="fas fa-plus"></i> Experience
             </Link>
         </div>
     )
 }
 
-export default Actions;
+export default Links;

@@ -21,7 +21,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <li>
                  <Link to='/dashboard'>
                  <i className="fas fa-user"></i>{' '}
-                 <span className="hide-sm">Dashboard</span>
+                 <span className="hide-sm">Home</span>
                  </Link>
             </li>
             <li>
@@ -44,7 +44,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     return (
         <nav className="navbar">
             <h1>
-               <Link to='/'>Craft Connect</Link>
+               <Link to='/'>a & c</Link>
             </h1>
             { !loading && (<Fragment>{ isAuthenticated ? userLinks : guestLinks }</Fragment>)}
         </nav>

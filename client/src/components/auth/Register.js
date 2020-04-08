@@ -33,6 +33,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     return (
         <Fragment>
+            <section className="auth-container">
             <h1 className="lg primary-txt">Sign Up</h1>
             <p className="lead">Create an account here</p>
             <form className="form" onSubmit={event => onSubmit(event)}>
@@ -77,6 +78,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 <input type="submit" className="btn btn-primary" value="Register" />
             </form>
             <p className="my-1">Already have an account? <Link to='/login'>Login</Link></p>
+            </section>
         </Fragment>
     )
 }

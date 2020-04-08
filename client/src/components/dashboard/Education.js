@@ -10,18 +10,18 @@ const Education = ({ education, deleteEducation }) => {
             <td>{edu.school}</td>
             <td className="hide-sm">{edu.degree}</td>
             <td>
-                <Moment format='YYYY/MM/DD'>{edu.from}</Moment> 
+                <Moment format='MM/DD/YY'>{edu.from}</Moment> 
                 - {
                     edu.to === null 
                     ? (' Current') 
-                    : (<Moment format='YYYY/MM/DD'>{edu.to}</Moment>
+                    : (<Moment format='MM/DD/YY'>{edu.to}</Moment>
                     )}
             </td>
             <td>
                 <button 
                 onClick={() => deleteEducation(edu._id)}
-                className='btn btn-danger'>
-                    Delete
+                className='btn btn-delete btn-danger'>
+                    <i class="fas fa-times-circle"></i>
                 </button>
             </td>
         </tr>
