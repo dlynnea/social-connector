@@ -14,15 +14,14 @@ const PostForm = ({ addPost }) => {
 
     return (
         <div className="post-form">
-            <div className="bg-primary p">
-                <h3>Make a Post...</h3>
-            </div>
+            {/* <div className="bg-primary p">
+            </div> */}
             <form className="form my-1" onSubmit={(event) => onSubmit(event)}>
                 <textarea 
                 name="text"
-                cols="20"
-                rows="5"
-                placeholder="Create a post"
+                cols="10"
+                rows="6"
+                placeholder="Share something..."
                 value={text}
                 onChange={(event) => setText(event.target.value)}
                 required

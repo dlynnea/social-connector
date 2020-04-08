@@ -7,47 +7,59 @@ import { logout } from '../../actions/auth';
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     const userLinks = (
+        <nav className="navbar-in">
+            <h1>
+               <Link to='/'>a & c</Link>
+            </h1>
         <ul>
             <li>
                  <Link to='/profiles'>
-                    Profiles
+                    PROFILES
                  </Link>
             </li>
             <li>
                  <Link to='/posts'>
-                    Posts
+                    POSTS
                  </Link>
             </li>
             <li>
                  <Link to='/dashboard'>
-                 <i className="fas fa-user"></i>{' '}
-                 <span className="hide-sm">Home</span>
+                 {/* <i className="fas fa-user"></i>{' '} */}
+                 <span className="hide-sm">HOME</span>
                  </Link>
             </li>
             <li>
                 <a onClick={logout} href="#!">
-                    <i className="fas fa-sign-out-alt"></i>{' '}
-                    <span className="hide-sm">Logout</span>
+                    {/* <i className="fas fa-sign-out-alt"></i>{' '} */}
+                    <span className="hide-sm">LOGOUT</span>
                 </a>
             </li>
         </ul>
+        </nav>
     )
 
     const guestLinks = (
-        <ul>
-            <li><Link to='/profiles'>Profiles</Link></li>
-            <li><Link to='/register'>Register</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-        </ul>
-    )
-
-    return (
         <nav className="navbar">
             <h1>
                <Link to='/'>a & c</Link>
             </h1>
-            { !loading && (<Fragment>{ isAuthenticated ? userLinks : guestLinks }</Fragment>)}
+            <ul>
+                <li><Link to='/profiles'>PROFILES</Link></li>
+                <li><Link to='/register'>REGISTER</Link></li>
+                <li><Link to='/login'>LOGIN</Link></li>
+            </ul>
         </nav>
+    )
+
+    return (
+        <>
+        {/* <nav className="navbar"> */}
+            {/* <h1>
+               <Link to='/'>a & c</Link>
+            </h1> */}
+            { !loading && (<Fragment>{ isAuthenticated ? userLinks : guestLinks }</Fragment>)}
+        {/* </nav> */}
+        </>
     )
 }
 
