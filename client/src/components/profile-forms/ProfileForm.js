@@ -59,11 +59,11 @@ const ProfileForm = ({
     instagram
   } = formData;
 
-  const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = event =>
+    setFormData({ ...formData, [event.target.name]: event.target.value });
 
-  const onSubmit = e => {
-    e.preventDefault();
+  const onSubmit = event => {
+    event.preventDefault();
     createProfile(formData, history, true);
   };
 
@@ -77,18 +77,18 @@ const ProfileForm = ({
       <form className="form" onSubmit={onSubmit}>
         <div className="form-input">
           <select name="status" value={status} onChange={onChange}>
-            <option>* Select Professional Status</option>
+            <option>* Select and Interest or Status</option>
+            <option value="Artist">Artist</option>
+            <option value="Scientist">Scientist</option>
             <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
+            <option value="Potter">Potter</option>
             <option value="Student or Learning">Student or Learning</option>
             <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
+            <option value="Physicist">Physicist</option>
             <option value="Other">Other</option>
           </select>
           <small className="form-note">
-            Give us an idea of where you are at in your career
+            Give us an idea of why you're here
           </small>
         </div>
         <div className="form-input">
@@ -100,7 +100,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-note">
-            Could be your own company or one you work for
+            Looking for a job or ideas?
           </small>
         </div>
         <div className="form-input">
@@ -112,7 +112,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-note">
-            Could be your own or a company website
+            Do you have a personal website?
           </small>
         </div>
         {/* image upload */}
@@ -138,7 +138,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-note">
-            City & state suggested (eg. Boston, MA)
+            City & state (eg. Denver, CO)
           </small>
         </div>
         <div className="form-input">
@@ -162,8 +162,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-note">
-            If you want your latest repos and a Github link, include your
-            username
+            For Developers, if you want your latest repos, include your username
           </small>
         </div>
         <div className="form-input">
@@ -184,7 +183,7 @@ const ProfileForm = ({
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <span>(Optional)</span>
         </div>
 
         {displaySocialInputs && (

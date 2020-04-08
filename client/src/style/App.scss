@@ -258,18 +258,16 @@ img {
 
 .btn {
 display: inline-block;
-// background: $backlight;
-// color: #333;
 padding: 0.4rem 1.3rem;
 font-size: 1rem;
 border: none;
 cursor: pointer;
 margin-right: 0.5rem;
-transition: opacity 0.2s ease-in;
+transition: opacity 0.3s ease-in;
 outline: none;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 
@@ -292,6 +290,33 @@ outline: none;
   height: 1px;
   background: #ccc;
   margin: 1.5rem 0;
+}
+
+/* Tables */
+
+.table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table th {
+  background: $backlight;
+}
+
+.btn-delete {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+td i {
+  color: $warning;
+  font-size: 1.4rem;
 }
 
 /* Forms */
@@ -353,21 +378,6 @@ button {
     color: #0077b5;
   }
 }
-
-.table th,
-.table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-.table th {
-  background: $backlight;
-}
-
-.table {
-  width: 800px;
-}
-
 
 /* Profile Page */
 
@@ -527,13 +537,13 @@ footer {
   background: #28838320;
   padding: 6px;
   color: #fff;
-  justify-content: right;
+  justify-content: center;
 
   p {
     margin: 0.6rem;
     color: $dark-color;
-    text-align: right;
-    padding-right: 8px;
+    text-align: center;
+    // padding-right: 8px;
   }
 }
 

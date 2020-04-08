@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUserProfile, deleteProfile } from '../../actions/profile';
 import Wheel from '../layout/Wheel'
-import Actions from './Actions';
+import Links from './Links';
 import Experience from './Experience';
 import Education from './Education';
 
@@ -20,7 +20,7 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
         </p>
         {profile !== null 
         ? (<Fragment>
-            <Actions />
+            <Links />
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
 
