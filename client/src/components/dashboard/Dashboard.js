@@ -26,8 +26,9 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
 
             <div className="my-2">
                 <button onClick={() => deleteProfile()} className="btn btn-danger">
-                    Delete My Account!
+                    Delete Account
                 </button>
+                <small className="form-note">This will permanently delete your account.</small>
             </div>
         </Fragment>) 
         : (
