@@ -14,10 +14,7 @@ const Posts = ({ getPosts, post: { posts, loading }}) => {
     return loading 
         ? (<Wheel />)
         : (<Fragment>
-            <h1 className="lg primary-txt">Posts</h1>
-            <p className="lead">
-                <i className="fas fa-user"></i> Welcome!
-            </p>
+            <h1 className="lg primary-txt">Feed</h1>
             <PostForm />
             <div className="posts">
                 {posts.map(post => (
