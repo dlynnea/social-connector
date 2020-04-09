@@ -6,6 +6,9 @@ const request = require('request');
 const config = require('config');
 const normalize = require('normalize-url');
 
+const multer = require('multer');
+const mongoose = require('mongoose');
+
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 const Post = require('../../models/Post');

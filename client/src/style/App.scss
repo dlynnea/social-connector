@@ -94,7 +94,7 @@ img {
   position: fixed;
   z-index: 1;
   width: 100%;
-  height: 10%;
+  // height: 10%;
   top: 0;
   background-color: $primary-color;
   border-bottom: solid 1px var($primary-color);
@@ -133,7 +133,6 @@ img {
     background-color: $primary-color;
     border-bottom: solid 1px var($primary-color);
     opacity: 0.9;
-    background: url('../img/color2.jpg') no-repeat center center/cover;
 
     ul {
       display: flex;
@@ -469,6 +468,7 @@ button {
   justify-content: center;
   text-align: center;
   background-color: $rose;
+  border-radius: 4px;
 
   img {
     width: 250px;
