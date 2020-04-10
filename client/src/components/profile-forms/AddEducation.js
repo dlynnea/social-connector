@@ -35,16 +35,16 @@ const AddEducation = ({ addEducation, history }) => {
             <small>* = required field</small>
             <form className="form" onSubmit={(event) => onSubmit(event)}>
                 <div className="form-input">
-                    <input type="text" placeholder="School" name="school" value={school} onChange={(event) => onChange(event)}/>
+                    <input type="text" placeholder="* School" name="school" value={school} onChange={(event) => onChange(event)}/>
                 </div>
                 <div className="form-input">
-                    <input type="text" placeholder="Degree or Certificate" name="degree" value={degree} onChange={(event) => onChange(event)}/>
+                    <input type="text" placeholder="* Degree or Certificate" name="degree" value={degree} onChange={(event) => onChange(event)}/>
                 </div>
                 <div className="form-input">
                     <input type="text" placeholder="Field of Study" name="fieldofstudy" value={fieldofstudy} onChange={(event) => onChange(event)}/>
                 </div>
                 <div className="form-input">
-                    <h4>From Date:</h4>
+                    <h4>* From Date:</h4>
                     <input type="date" name="from" value={from} onChange={(event) => onChange(event)}/>
                 </div>
                 <div className="form-input">
@@ -52,10 +52,10 @@ const AddEducation = ({ addEducation, history }) => {
                     onChange={(event) => {
                         setFormData({ ...formData, current: !current })
                         toggleDisabled(!toDateDisabled)}}
-                    /> Current</p>
+                    /> * Current</p>
                 </div>
                 <div className="form-input">
-                    <h4>To Date:</h4>
+                    <h4>* To Date:</h4>
                     <input type="date" name="to" value={to} onChange={(event) => onChange(event)} 
                     disabled={toDateDisabled ? 'disabled' : ''}/>
                 </div>

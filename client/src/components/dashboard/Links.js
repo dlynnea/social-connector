@@ -8,10 +8,10 @@ const Links = () => {
                 Edit Profile
             </Link>
             <Link to="/add-education" className="btn btn-light">
-            <i class="fas fa-plus"></i> Education
+            <i className="fas fa-plus"></i> Education
             </Link>
             <Link to="/add-experience" className="btn btn-light">
-            <i class="fas fa-plus"></i> Experience
+            <i className="fas fa-plus"></i> Experience
             </Link>
         </div>
     )

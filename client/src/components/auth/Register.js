@@ -36,7 +36,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             <section className="auth-container">
             <h1 className="lg primary-txt">Sign Up</h1>
             <p className="lead">Create an account here</p>
-            <form className="form" onSubmit={event => onSubmit(event)}>
+            <form className="form auth-form" onSubmit={event => onSubmit(event)}>
                 <div className="form-input">
                     <input 
                     type="text" 

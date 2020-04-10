@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getUserProfile } from '../../actions/profile';
+import FileUpload from './FileUpload';
 
 const initialState = {
   company: '',
@@ -250,6 +251,7 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
+      <FileUpload />
     </Fragment>
   );
 };

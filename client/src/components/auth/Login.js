@@ -28,7 +28,7 @@ const Login = ({ login, isAuthenticated }) => {
         <section className="auth-container">
         <h1 className="lg primary-txt">Login</h1>
         <p className="lead">Login Here</p>
-        <form className="form" onSubmit={e => onSubmit(e)}>
+        <form className="form auth-form" onSubmit={e => onSubmit(e)}>
             <div className="form-input">
                 <input 
                 type="email" 
