@@ -10,6 +10,7 @@ import {
     LOGOUT,
     CLEAR_PROFILE
 } from './constants';
+
 import setToken from '../utilities/setToken';
 
 export const register = ({ name, email, password }) => async dispatch => {
@@ -85,7 +86,7 @@ export const loadUser = () => async dispatch => {
     }
 }
 
-export const logout = () => dispatch => {
-    dispatch({ type: CLEAR_PROFILE });
-    dispatch({ type: LOGOUT });
+export const logout = () => async dispatch => {
+        dispatch({ type: CLEAR_PROFILE });
+        dispatch({ type: LOGOUT })
 }
