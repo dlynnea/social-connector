@@ -21,8 +21,9 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth, match }) =
                 ? <Wheel />
                 : (
                     <Fragment>
+                        <div className="my-1 button-top">
                         <Link to='/profiles' className="btn btn-light">
-                            Back
+                        <i class="fas fa-angle-left"></i> Back
                         </Link>
                         { 
                         auth.isAuthenticated && 
@@ -33,6 +34,7 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth, match }) =
                             Edit Profile
                         </Link>
                         )}
+                        </div>
                         <div className="profile-grid my-1">
                             <ProfileHeader profile={profile} />
                             <About profile={profile} />

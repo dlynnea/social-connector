@@ -18,7 +18,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     <Wheel /> 
     ) : (
     <Fragment>
-        <Link to='/posts' className='btn'>Back</Link>
+        <Link to='/posts' className='btn btn-light'><i class="fas fa-angle-left"></i> Back</Link>
         <PostItem post={post} showActions={false} />
         <CommentForm postId={post._id} />
         <div className="comments">
