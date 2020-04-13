@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getUserProfile } from '../../actions/profile';
-import FileUpload from './FileUpload';
 
 const initialState = {
   company: '',
@@ -80,16 +79,17 @@ const ProfileForm = ({
           <select name="status" value={status} onChange={onChange}>
             <option>* Select and Interest or Status</option>
             <option value="Artist">Artist</option>
-            <option value="Scientist">Scientist</option>
             <option value="Developer">Developer</option>
+            <option value="Engineer">Engineer</option>
+            <option value="Instructor">Instructor</option>
+            <option value="Scientist">Scientist</option>
             <option value="Potter">Potter</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
             <option value="Physicist">Physicist</option>
+            <option value="Student">Student</option>
             <option value="Other">Other</option>
           </select>
           <small className="form-note">
-            Give us an idea of why you're here
+            Give us an idea of what you do
           </small>
         </div>
         <div className="form-input">
@@ -251,7 +251,6 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
-      <FileUpload />
     </Fragment>
   );
 };

@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const userLinks = (
         <nav className="navbar-in">
             <h1>
-               <Link to='/'>a & c</Link>
+               <Link to='/'>dot join<i class="far fa-circle"></i></Link>
             </h1>
         <ul>
             <li>
@@ -43,7 +43,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const guestLinks = (
         <nav className="navbar">
             <h1>
-               <Link to='/'>a & c</Link>
+               <Link to='/'>dot join <i class="far fa-circle"></i></Link>
             </h1>
             <ul>
                 <li><Link to='/profiles'>PROFILES</Link></li>

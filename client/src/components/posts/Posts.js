@@ -15,8 +15,8 @@ const Posts = ({ getPosts, post: { posts, loading }}) => {
         ? (<Wheel />)
         : (<Fragment>
             <div className="bg-primary p">
-                <h1 className="lg primary-txt">Posts</h1>
-                <h3>Write your post here</h3>
+                <h1 className="lg primary-txt post-header">Posts</h1>
+                {/* <h3>Write your post here</h3> */}
             </div>
             <PostForm />
             <div className="posts">

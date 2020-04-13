@@ -294,6 +294,10 @@ img {
   margin: 3rem 0;
 }
 
+.delete-account {
+  margin-top: 8rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.4rem 1.3rem;
@@ -472,8 +476,9 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: $rose;
+  // background-color: $rose;
   border-radius: 4px;
+  background: url('../img/yellow.jpg') no-repeat center center/cover;
 
   img {
     width: 250px;
@@ -567,6 +572,11 @@ button {
 .post-form .post-form-header {
   background: $primary-color;
   padding: 0.5rem;
+}
+
+.post-header {
+  color: $light-green;
+  padding: 1rem 0 0 2rem;
 }
 
 .post-form {

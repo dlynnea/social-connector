@@ -24,11 +24,10 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
 
-            <div className="my-2">
+            <div className="delete-account my-3">
                 <button onClick={() => deleteProfile()} className="btn btn-danger">
                     Delete Account
                 </button>
-                <small className="form-note">This will permanently delete your account.</small>
             </div>
         </Fragment>) 
         : (
