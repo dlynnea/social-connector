@@ -120,40 +120,6 @@ img {
   }  
 }
 
-.navbar-in {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 10%;
-    top: 0;
-    background-color: $primary-color;
-    border-bottom: solid 1px var($primary-color);
-    opacity: 0.9;
-
-    ul {
-      display: flex;
-  }
-
-  a {
-    color: #fff;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-
-    &:hover {
-      color: var($primary-color);
-
-    }
-  }
-
-  .welcome span {
-    margin-right: 0.6rem;
-  }  
-}
-
   
 // Landing Page
 
@@ -410,16 +376,15 @@ td i {
 .form select {
   display: block;
   width: 100%;
-  height: 40px;
-  // padding: 0.4rem;
-  // font-size: 1.2rem;
-  // border: 1px solid #ccc;
+  height: 38px;
+  padding: 0.4rem;
 }
 
 .form textarea {
   display: block;
   width: 100%;
   padding: 0.4rem;
+  // border-bottom: 0.5px solid #999;
   // font-size: 1.2rem;
 }
 
@@ -661,17 +626,25 @@ footer {
 
 // edit add profile form
 
-.form-element {
-  position: relative;
-  margin-top: 2.25rem;
-  margin-bottom: 2.25rem;
+div.social-input {
+  display: flex;
+  border-bottom: 1px solid #999;
+
+  i {
+    font-size: 1.5rem;
+    margin-right: 0.6rem;
+    margin-left: 0.4rem;
+  }
+
+  .form-element-field {
+    margin-bottom: -1rem;
+  }
 }
 
-.form-element-hint {
-  font-weight: 400;
-  font-size: 0.6875rem;
-  color: #a6a6a6;
-  display: block;
+.form-element {
+  position: relative;
+  // margin-top: 2.25rem;
+  // margin-bottom: 2.25rem;
 }
 
 div.form-element-bar {
@@ -687,7 +660,7 @@ div.form-element-bar {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #337ab7;
+  background: $dark-color;
   height: 2px;
   display: block;
   transform: rotateY(90deg);
@@ -702,7 +675,7 @@ div.form-element-bar {
   pointer-events: none;
   padding-left: 0.125rem;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   white-space: nowrap;
   overflow: hidden;
@@ -717,7 +690,7 @@ div.form-element-bar {
 
 .form-element-field {
   outline: none;
-  height: 1.5rem;
+  height: 1.8rem;
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -749,7 +722,7 @@ div.form-element-bar {
 }
 
 .form-element-field:focus ~ .form-element-label {
-  color: #337ab7;
+  color: $dark-color;
 }
 
 .form-element-field.-hasvalue,
@@ -827,7 +800,7 @@ select.form-element-field {
 
 .form-btn,
 .form-btn-cancel {
-  background: transparent;
+  // background: transparent;
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
@@ -854,7 +827,7 @@ select.form-element-field {
 
 .form-btn::before,
 .form-btn-cancel::before {
-  background: #337ab7;
+  background: $dark-color;
   z-index: -2;
 }
 
@@ -886,7 +859,7 @@ select.form-element-field {
 
 .form-btn-cancel {
   transition: color 0.28s ease, transform 0.28s ease;
-  color: #b52b27;
+  color: $warning;
   border-color: currentColor;
   will-change: color, transform;
 }
@@ -896,7 +869,7 @@ select.form-element-field {
 }
 
 .form-btn-cancel::before {
-  background: #b52b27;
+  background: $warning;
   opacity: 0;
   transition: opacity 0.28s ease;
   will-change: opacity;
@@ -915,7 +888,6 @@ select.form-element-field {
 .form-btn-cancel:hover::before {
   opacity: 1;
 }
-
 
 
 
@@ -944,4 +916,14 @@ select.form-element-field {
   -ms-flex: 1;
   flex: 1;
   margin-top: 0;
+}
+
+.social-media {
+  margin: 2rem 0;
+  margin-right: 0.2rem;
+}
+
+//
+.profile-form {
+  margin: 0 10rem;
 }

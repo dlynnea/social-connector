@@ -7,10 +7,6 @@ import { logout } from '../../actions/auth';
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     const userLinks = (
-        <nav className="navbar-in">
-            <h1>
-               <Link to='/'>dot join<i class="far fa-circle"></i></Link>
-            </h1>
         <ul>
             <li>
                  <Link to='/profiles'>
@@ -37,30 +33,24 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                 </Link>
             </li>
         </ul>
-        </nav>
-    )
+    );
 
     const guestLinks = (
-        <nav className="navbar">
-            <h1>
-               <Link to='/'>dot join <i class="far fa-circle"></i></Link>
-            </h1>
             <ul>
                 <li><Link to='/profiles'>PROFILES</Link></li>
                 <li><Link to='/register'>REGISTER</Link></li>
                 <li><Link to='/login'>LOGIN</Link></li>
             </ul>
-        </nav>
     )
 
     return (
         <>
-        {/* <nav className="navbar"> */}
-            {/* <h1>
+        <nav className="navbar">
+            <h1>
                <Link to='/'>a & c</Link>
-            </h1> */}
+            </h1>
             { !loading && (<Fragment>{ isAuthenticated ? userLinks : guestLinks }</Fragment>)}
-        {/* </nav> */}
+         </nav>
         </>
     )
 }

@@ -69,6 +69,7 @@ const ProfileForm = ({
 
   return (
     <Fragment>
+      <div className="profile-form">
       <h1 className="lg primary-txt">Edit Profile</h1>
 
       <small>* = required field</small>
@@ -92,7 +93,7 @@ const ProfileForm = ({
         </div> */}
 
 
-        <div className="form-element form-select form-input">
+        {/* <div className="form-element form-select form-input">
             <select className="form-element-field" name="status" value={status} onChange={onChange}>
                 <option disabled selected value="" className="form-select-placeholder"></option>
                 <option value="Artist">Artist</option>
@@ -106,56 +107,81 @@ const ProfileForm = ({
                 <option value="Other">Other</option>
             </select>
             <div className="form-element-bar"></div>
-            <label className="form-element-label">Give us an idea of what you do</label>
-        </div>
+            <label className="form-element-label">*Select your interest or profession</label>
+        </div> */}
 
         <div className="form-element form-input">
             <input 
               className="form-element-field" 
               placeholder="What do you currently do?" 
+              name="status" 
+              value={status} 
+              onChange={onChange}
+              type="input" 
+            />
+            <div className="form-element-bar"></div>
+            <label className="form-element-label">*Select your interest or profession</label>
+        </div>
+
+        <div className="form-element form-input">
+            <input 
+              className="form-element-field" 
+              placeholder="Where do you work?" 
               type="input" 
               name="company"
               value={company}
               onChange={onChange}
             />
             <div className="form-element-bar"></div>
-            <label className="form-element-label">Job</label>
+            <label className="form-element-label">*Company</label>
         </div>
         <div className="form-element form-input">
             <input 
               className="form-element-field" 
               type="input" 
-              placeholder="Website"
+              placeholder="Enter a personal website or portfolio"
               name="website"
               value={website}
               onChange={onChange}
             />
             <div className="form-element-bar"></div>
-            <label className="form-element-label">Do you have a personal website?</label>
+            <label className="form-element-label">Website</label>
         </div>
         <div className="form-element form-input">
             <input 
               className="form-element-field" 
               type="input" 
-              placeholder="Location"
+              placeholder="City & State (i.e. Denver, CO)"
               name="location"
               value={location}
               onChange={onChange}
             />
             <div className="form-element-bar"></div>
-            <label className="form-element-label">City & state (eg. Denver, CO)</label>
+            <label className="form-element-label">Location</label>
+        </div>
+        <div className="form-element form-input">
+            <input 
+              className="form-element-field" 
+              type="input" 
+              placeholder="Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)"
+              name="skills"
+              value={skills}
+              onChange={onChange}
+            />
+            <div className="form-element-bar"></div>
+            <label className="form-element-label">*Skills</label>
         </div>
 
         <div className="form-element form-textarea">
             <textarea 
               className="form-element-field" 
-              placeholder="A short bio of yourself"
+              placeholder="Tell us a little about yourself"
               name="bio"
               value={bio}
               onChange={onChange}>
             </textarea>
+            <label className="form-element-label">Bio</label>
             <div className="form-element-bar"></div>
-            <label className="form-element-label">Tell us a little about yourself</label>
         </div>
 
         {/* <div className="form-input">
@@ -233,9 +259,9 @@ const ProfileForm = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
+            className="social-media btn btn-light"
           >
-            Social Network Links
+            Social Media
           </button>
           <span>(Optional)</span>
         </div>
@@ -244,7 +270,7 @@ const ProfileForm = ({
         {displaySocialInputs && (
           <Fragment>
             <div className="form-input social-input form-element">
-              {/* <i className="fab fa-twitter fa-2x" /> */}
+              <i className="fab fa-twitter fa-2x" />
               <input
                 className="form-element-field" 
                 type="input" 
@@ -253,12 +279,12 @@ const ProfileForm = ({
                 value={twitter}
                 onChange={onChange}
               />
-            <label className="form-element-label"><i className="fab fa-twitter fa-2x" /></label>
-              <div className="form-element-bar"></div>
+            <label className="form-element-label"></label>
+            <div className="form-element-bar"></div>
             </div>
 
             <div className="form-input form-element social-input">
-              {/* <i className="fab fa-facebook fa-2x" /> */}
+              <i className="fab fa-facebook fa-2x" />
               <input
                 className="form-element-field" 
                 type="input" 
@@ -267,12 +293,12 @@ const ProfileForm = ({
                 value={facebook}
                 onChange={onChange}
               />
-              <label className="form-element-label"><i className="fab fa-facebook fa-2x" /></label>
+              <label className="form-element-label"></label>
               <div className="form-element-bar"></div>
             </div>
 
             <div className="form-input social-input form-element">
-              {/* <i className="fab fa-youtube fa-2x" /> */}
+              <i className="fab fa-youtube fa-2x" />
               <input
                 className="form-element-field" 
                 type="input" 
@@ -281,12 +307,12 @@ const ProfileForm = ({
                 value={youtube}
                 onChange={onChange}
               />
-              <label className="form-element-label"><i className="fab fa-youtube fa-2x" /></label>
+              <label className="form-element-label"></label>
               <div className="form-element-bar"></div>
             </div>
 
             <div className="form-input social-input form-element">
-              {/* <i className="fab fa-linkedin fa-2x" /> */}
+              <i className="fab fa-linkedin fa-2x" />
               <input
                 className="form-element-field" 
                 type="input" 
@@ -295,12 +321,12 @@ const ProfileForm = ({
                 value={linkedin}
                 onChange={onChange}
               />
-              <label className="form-element-label"><i className="fab fa-linkedin fa-2x" /></label>
+              <label className="form-element-label"></label>
               <div className="form-element-bar"></div>
             </div>
 
             <div className="form-input social-input form-element">
-              {/* <i className="fab fa-instagram fa-2x" /> */}
+              <i className="fab fa-instagram fa-2x" />
               <input
                 className="form-element-field" 
                 type="input" 
@@ -309,7 +335,7 @@ const ProfileForm = ({
                 value={instagram}
                 onChange={onChange}
               />
-              <label className="form-element-label"><i className="fab fa-instagram fa-2x" /></label>
+              <label className="form-element-label"></label>
               <div className="form-element-bar"></div>
             </div>
           </Fragment>
@@ -322,6 +348,7 @@ const ProfileForm = ({
         <input type="submit" className="form-btn btn btn-primary my-1" />
       </div>
       </form>
+      </div>
     </Fragment>
   );
 };

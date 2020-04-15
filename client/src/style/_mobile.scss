@@ -1,5 +1,5 @@
 @media (max-width: 700px) {
-    .container {
+    div.container {
       margin-top: 8rem;
     }
   
@@ -25,7 +25,7 @@
     }
   
     /* Navbar */
-    .navbar {
+    nav.navbar {
       display: block;
       text-align: center;
     }
@@ -86,6 +86,10 @@
     .post a,
     .post button {
       padding: 0.3rem 0.4rem;
+    }
+
+    .container .profile-form {
+      margin: 0;
     }
   }
   
