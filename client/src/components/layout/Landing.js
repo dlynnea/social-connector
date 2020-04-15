@@ -13,8 +13,9 @@ const Landing = ({ isAuthenticated }) => {
             <div className="overlay">
                 <div className="inside-landing">
                     <h1 className="xl">Dot Join</h1>
-                    <small>[ A JOIN is a means for combining columns (people) from one or more tables (backgrounds) by using values (interests) common to each ]</small>
-                    <p className="lead">Create a profile where you can share posts, share ideas and get help from those you connect with.</p>
+                    {/* <small>[ A JOIN is a means for combining columns (people) from one or more tables (backgrounds) by using values (interests) common to each ]</small> */}
+                    {/* <p className="lead">Create a profile where you can share posts, share ideas and get help from those you connect with.</p> */}
+                    <p className="lead">A JOIN is a means for combining columns (people) from one or more tables (backgrounds) by using values (interests) common to each</p>
                     <div className="buttons">
                         <Link className="btn btn-primary" to='/register'>Sign Up</Link>
                         <Link className="btn btn-light" to='/login'>Login</Link>
