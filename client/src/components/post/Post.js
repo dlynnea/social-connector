@@ -19,16 +19,18 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     ) : (
     <Fragment>
         <Link to='/posts' className='btn btn-light'><i class="fas fa-angle-left"></i> Back</Link>
-        <PostItem post={post} showActions={false} />
+        <div className="single-post">
+            <PostItem post={post} showActions={false} />
         <CommentForm postId={post._id} />
         <div className="comments">
             {post.comments.map(comment => (
                 <CommentItem 
-                    key={comment._id} 
-                    comment={comment} 
-                    postId={post._id} 
+                key={comment._id} 
+                comment={comment} 
+                postId={post._id} 
                 />
-            ))}
+                ))}
+        </div>
         </div>
     </Fragment>
     );
