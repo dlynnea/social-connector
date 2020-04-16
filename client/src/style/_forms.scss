@@ -15,6 +15,10 @@
     color: #888;
 }
 
+.comment-form {
+    max-width: 400px;
+}
+
 .form input[type='text'],
 .form input[type='email'],
 .form input[type='password'],
@@ -363,3 +367,22 @@ select.form-element-field {
 .profile-form {
     margin: 0 10rem;
 }
+
+.post-form {
+    border: 1px dotted $primary-color;
+    border-top: none;
+    padding: 2rem;
+  
+    .post-form-header {
+      background: $off-white;
+      padding: 0.5rem;
+    }
+
+    .form-element-label {
+        margin-top: 1.6rem;
+    }
+
+    input {
+        margin-top: 1rem;
+    }
+  }

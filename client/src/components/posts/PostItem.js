@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
-import { addLike, removeLike, deletePost } from '../../actions/post';
+import { addLike, deletePost } from '../../actions/post';
 
-const PostItem = ({ addLike, removeLike, deletePost, auth, showActions, post: { _id, text, name, avatar, user, likes, comments, date }}) => {
+const PostItem = ({ addLike, deletePost, auth, showActions, post: { _id, text, name, avatar, user, likes, comments, date }}) => {
     return (
         <div className="post bg-white p-1 my-1">
             <div>
@@ -33,7 +33,7 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, showActions, post: { 
                     </button> */}
                     <Link to={`/posts/${_id}`} className="btn btn-primary">
                     <i class="far fa-comment"></i> {comments.length > 0 && (
-                            <span className="comment-count"> ({comments.length})</span>
+                            <span className="comment-count"> {comments.length}</span>
                         )}
                     </Link>
                     {!auth.loading && user === auth.user._id && (
@@ -64,4 +64,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 })
 
-export default connect(mapStateToProps, { addLike, removeLike, deletePost })(PostItem);
+export default connect(mapStateToProps, { addLike, deletePost })(PostItem);

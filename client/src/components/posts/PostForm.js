@@ -13,20 +13,19 @@ const PostForm = ({ addPost }) => {
     }
 
     return (
-        <div className="post-form">
-            {/* <div className="bg-primary p">
-            </div> */}
-            <form className="form my-1" onSubmit={(event) => onSubmit(event)}>
+        <div className="post-form form-element form-input">
+            <form className="form" onSubmit={(event) => onSubmit(event)}>
                 <textarea 
+                className="form-element-field" 
                 name="text"
-                cols="10"
-                rows="6"
                 placeholder="Share something..."
                 value={text}
                 onChange={(event) => setText(event.target.value)}
                 required
                 ></textarea>
-                <input type="submit" className="btn btn-dark my-1" value="Submit" />
+                <div className="form-element-bar"></div>
+                <label className="form-element-label">New Post</label>
+                <input type="submit" className="btn btn-light my-1" value="Submit" />
             </form>
         </div>
     )

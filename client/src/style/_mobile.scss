@@ -107,6 +107,7 @@
     .post {
       grid-template-columns: 1fr;
     }
+
     .post a,
     .post button {
       padding: 0.3rem 0.4rem;
@@ -114,6 +115,21 @@
 
     .container .profile-form {
       margin: 0;
+    }
+
+    div.posts {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      img {
+        align-self: center;
+        justify-self: center;
+      }
+
+      .btn {
+        height: 42px;
+        // width: 136px;
+      }
     }
   }
   

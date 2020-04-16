@@ -273,6 +273,7 @@ td i {
   overflow: scroll;
   padding-bottom: 1rem;
   margin: 0.4rem;
+  border-radius: 18px;
 
   a {
     width: 100%;
@@ -396,30 +397,34 @@ td i {
 }
 
 /* Posts Page */
-.post-form .post-form-header {
-  background: $primary-color;
-  padding: 0.5rem;
-}
 
 .post-header {
   color: $background;
   padding: 1rem 0 0 2rem;
 }
 
-.post-form {
-  border: 1px dotted $dark-color;
-  padding: 2rem;
+.posts {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  align-self: center;
 }
 
 .post {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 3rem;
-  align-items: center;
-  border-radius: 38px;
+  padding: 1rem;
+  grid-gap: 1rem;
+  max-width: 400px;
+  max-height: 420px;
+  overflow: scroll;
+  // justify-self: center;
+  // justify-content: center;
+  border-radius: 18px;
+  text-align: center;
 
   img {
-    width: 110px;
+    width: 120px;
   }
 
   div:first-child {
