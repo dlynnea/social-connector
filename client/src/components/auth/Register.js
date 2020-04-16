@@ -37,26 +37,33 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             <h1 className="lg primary-txt">Sign Up</h1>
             <p className="lead">Create an account here</p>
             <form className="form auth-form" onSubmit={event => onSubmit(event)}>
-                <div className="form-input">
+                <div className="form-input form-element">
                     <input 
+                    className="form-element-field" 
                     type="text" 
                     placeholder="Name"
                     value={name}
                     onChange={event => onChange(event)}
                     name="name"
                     required />
+                    <div className="form-element-bar"></div>
+                <label className="form-element-label">Name</label>
                 </div>
-                <div className="form-input">
+                <div className="form-input form-element">
                     <input 
+                    className="form-element-field" 
                     type="email" 
                     placeholder="Email"
                     value={email}
                     onChange={event => onChange(event)}
                     name="email"
                     required />
+                     <div className="form-element-bar"></div>
+                 <label className="form-element-label">Email</label>
                 </div>
-                <div className="form-input">
+                <div className="form-input form-element">
                     <input 
+                    className="form-element-field" 
                     type="password" 
                     placeholder="Password"
                     value={password}
@@ -64,9 +71,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     name="password"
                     required
                     minLength="6" />
+                    <div className="form-element-bar"></div>
+                <label className="form-element-label">Password</label>
                 </div>
-                <div className="form-input">
+                <div className="form-input form-element">
                     <input 
+                    className="form-element-field" 
                     type="password" 
                     placeholder="Confirm Password"
                     value={password2}
@@ -74,6 +84,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     name="password2"
                     required
                     minLength="4" />
+                    <div className="form-element-bar"></div>
+                <label className="form-element-label">Password</label>
                 </div>
                 <input type="submit" className="btn btn-primary" value="Register" />
             </form>

@@ -27,19 +27,22 @@ const Login = ({ login, isAuthenticated }) => {
         <Fragment>
         <section className="auth-container">
         <h1 className="lg primary-txt">Login</h1>
-        <p className="lead">Login Here</p>
         <form className="form auth-form" onSubmit={e => onSubmit(e)}>
-            <div className="form-input">
+            <div className="form-input form-element">
                 <input 
+                className="form-element-field" 
                 type="email" 
                 placeholder="Email"
                 value={email}
                 onChange={event => onChange(event)}
                 name="email"
                 required />
+                <div className="form-element-bar"></div>
+            <label className="form-element-label">Email</label>
             </div>
-            <div className="form-input">
+            <div className="form-input form-element">
                 <input 
+                className="form-element-field" 
                 type="password" 
                 placeholder="Password"
                 name="password"
@@ -47,6 +50,8 @@ const Login = ({ login, isAuthenticated }) => {
                 onChange={event => onChange(event)}
                 required
                 minLength="6" />
+                <div className="form-element-bar"></div>
+            <label className="form-element-label">Password</label>
             </div>
             <input type="submit" className="btn btn-primary" value="Login" />
         </form>
