@@ -38,8 +38,7 @@
     display: block;
     width: 100%;
     padding: 0.4rem;
-    // border-bottom: 0.5px solid #999;
-    // font-size: 1.2rem;
+    border-bottom: 0.5px solid #999;
 }
   
 .form input[type='submit'],
@@ -48,38 +47,34 @@ button {
 }
   
 .form .social-input {
-    // display: flex;
+    display: flex;
   
     i {
-      // padding: 0.5rem;
-      // width: 4rem;
       margin-bottom: 8px;
     }
   
     i.fa-twitter {
-      color: #38a1f3;
+      color: $form-label;
     }
   
     i.fa-facebook {
-      color: #3b5998;
+      color: $form-label;
     }
   
     i.fa-instagram {
-      color: #3f729b;
+      color: $form-label;
     }
   
     i.fa-youtube {
-      color: #c4302b;
+      color: $form-label;
     }
   
     i.fa-linkedin {
-      color: #0077b5;
+      color: $form-label;
     }
   }
 
-
-  // edit add profile form
-
+// edit add profile form
 div.social-input {
     display: flex;
     border-bottom: 1px solid #999;
@@ -135,7 +130,7 @@ div.social-input {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
-    color: #a6a6a6;
+    color: $form-label;
     transform: translateY(-50%);
     transform-origin: left center;
     transition: transform 0.28s ease, color 0.28s linear, opacity 0.28s linear;
@@ -152,7 +147,7 @@ div.social-input {
     border: 0 solid transparent;
     line-height: 1.5;
     width: 100%;
-    color: #333;
+    color: $form-placeholder;
     box-shadow: none;
     opacity: 0.001;
     transition: opacity 0.28s ease;

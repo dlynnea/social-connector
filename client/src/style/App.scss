@@ -182,6 +182,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.3s ease-in;
   outline: none;
+  text-align: center;
 
   &:hover {
     opacity: 0.8;
@@ -251,23 +252,12 @@ td i {
 }
 
 
-
 /* Profile Page */
-
-// .profile {
-//   display: grid;
-//   grid-template-columns: 2fr 4fr 2fr;
-//   align-items: center;
-//   grid-gap: 2rem;
-//   padding: 1rem;
-//   line-height: 1.8;
-//   margin-bottom: 1rem;
-// }
 
 .profiles {
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
 }
 
@@ -277,11 +267,12 @@ td i {
 
 .profile {
   display: grid;
-  padding: 1rem;
+  padding: 1.4rem;
   text-align: center;
-  height: 410px;
+  height: 420px;
   overflow: scroll;
   padding-bottom: 1rem;
+  margin: 0.4rem;
 
   a {
     width: 100%;
@@ -299,8 +290,7 @@ td i {
   display: grid;
   grid-template-areas:
     'top about'
-    'edu edu'
-    'exp exp'
+    'edu exp'
     'github github';
   grid-gap: 1rem;
 }
