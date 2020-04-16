@@ -14,7 +14,7 @@ const CommentForm = ({ postId, addComment }) => {
 
     return (
         <div className="comment-form">
-            <form className="form my-1" onSubmit={(event) => onSubmit(event)}>
+            <form className="form m-1-2" onSubmit={(event) => onSubmit(event)}>
                 <div className="form-element">
                     <textarea 
                         className="form-element-field" 
@@ -28,7 +28,7 @@ const CommentForm = ({ postId, addComment }) => {
                     <div className="form-element-bar"></div>
                     <label className="form-element-label">Leave a Comment</label>
                 </div>
-                <input type="submit" className="btn btn-light my-1" value="Submit" />
+                <input type="submit" className="btn btn-light my-1" value="Post" />
             </form>
         </div>
     )

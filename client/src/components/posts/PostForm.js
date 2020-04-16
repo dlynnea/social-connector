@@ -14,7 +14,7 @@ const PostForm = ({ addPost }) => {
 
     return (
         <div className="post-form">
-            <form className="form my-1" onSubmit={(event) => onSubmit(event)}>
+            <form className="form m-1-3" onSubmit={(event) => onSubmit(event)}>
                 <div className="form-element form-input">
                     <textarea 
                         className="form-element-field" 
@@ -28,7 +28,7 @@ const PostForm = ({ addPost }) => {
                     <div className="form-element-bar"></div>
                     <label className="form-element-label">New Post</label>
                 </div>
-                <input type="submit" className="btn btn-light my-1" value="Submit" />
+                <input type="submit" className="btn btn-light my-1" value="Post" />
             </form>
         </div>
     )

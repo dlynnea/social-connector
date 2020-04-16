@@ -35,7 +35,7 @@ $secondary-color: rgba(58, 76, 79, 0.9);
 $dark-color: rgb(24, 39, 43);
 $off-white: rgb(244, 241, 238);
 $backlight: rgba(160, 195, 199, 0.735);
-$background: rgb(52, 55, 57);
+$background: rgb(63, 66, 69);
 $table: rgb(52, 55, 57);
 $form-placeholder: rgb(130, 125, 125);
 $form-label: rgb(199, 191, 191);
@@ -159,6 +159,12 @@ $green-blue: rgb(73, 102, 84);
 }
 .my-3 {
     margin: 3rem 0;
+}
+.m-1-2 {
+    margin: 1rem 2rem;
+}
+.m-1-3 {
+    margin: 1rem 3rem;
 }
 
 //text
