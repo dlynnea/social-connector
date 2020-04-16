@@ -19,6 +19,17 @@
     width: 100%;
 }
 
+.comment-form-field {
+    border-bottom: 1px solid #999;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .form input[type='text'],
 .form input[type='email'],
 .form input[type='password'],
@@ -369,9 +380,9 @@ select.form-element-field {
 }
 
 .post-form {
-    border: 1px dotted $primary-color;
-    border-top: none;
-    padding: 2rem;
+    // border: 1px dotted $primary-color;
+    // border-top: none;
+    // padding: 2rem;
   
     .post-form-header {
       background: $off-white;
@@ -385,4 +396,4 @@ select.form-element-field {
     input {
         margin-top: 1rem;
     }
-  }
+}

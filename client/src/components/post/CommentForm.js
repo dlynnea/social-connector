@@ -14,20 +14,21 @@ const CommentForm = ({ postId, addComment }) => {
 
     return (
         <div className="comment-form">
-            <div className="bg-primary p">
-                <h3>Leave a Comment...</h3>
-            </div>
             <form className="form my-1" onSubmit={(event) => onSubmit(event)}>
+                <div className="form-element">
                 <textarea 
+                className="form-element-field" 
                 name="text"
-                cols="20"
-                rows="5"
+                rows="2"
                 placeholder="Comment.."
                 value={text}
                 onChange={(event) => setText(event.target.value)}
                 required
                 ></textarea>
-                <input type="submit" className="btn btn-dark my-1" value="Submit" />
+                <div className="form-element-bar"></div>
+                <label className="form-element-label">Leave a Comment</label>
+                <input type="submit" className="btn btn-light my-1" value="Submit" />
+                </div>
             </form>
         </div>
     )
