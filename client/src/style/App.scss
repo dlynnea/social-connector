@@ -131,7 +131,7 @@ img {
 }
 
 .primary-txt {
-  color: $primary-color;
+  color: $dark-color;
 }
 
 .dark-txt {
@@ -385,7 +385,6 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  // background-color: $rose;
   border-radius: 4px;
   background: url('../img/yellow.jpg') no-repeat center center/cover;
 
@@ -530,7 +529,7 @@ footer {
 
   p {
     margin: 0.6rem;
-    color: #fff;
+    color: $off-white;
     text-align: center;
     // padding-right: 8px;
   }
