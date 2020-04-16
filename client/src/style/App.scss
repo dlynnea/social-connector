@@ -28,12 +28,12 @@ body {
 }
 
 a {
-    color: $primary-color;
-    text-decoration: none;
+  color: $primary-color;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
@@ -208,11 +208,9 @@ img {
   }
 }
 
-
 .delete-account {
   display: flex;
   justify-content: space-between;
-
   margin-top: 8rem;
 }
 
@@ -308,6 +306,10 @@ td i {
   display: block;
   margin-top: 0.3rem;
   color: #888;
+}
+
+.form input[type='email'] {
+  margin-bottom: 0.1rem;
 }
 
 .form input[type='text'],
