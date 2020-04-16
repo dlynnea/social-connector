@@ -108,37 +108,12 @@ img {
   height: 100%;
 }
 
-
-//text
-
-.xl {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+.dashboard-header {
+  border-bottom: 1px dotted $off-white;
 }
 
-.lg {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: $off-white;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.primary-txt {
-  color: $off-white;
-}
-
-.dark-txt {
-  color: $dark-color;
+.dashboard {
+  margin: 1rem;
 }
 
 /* Utilities */
@@ -214,21 +189,32 @@ img {
 
 .table {
   width: 100%;
+  color: $off-white;
+  // border: 1px dotted $off-white;
+  padding: 1rem;
+  background-color: $secondary-color;
 }
 
 th {
-  border-radius: 8px;
+  border-bottom: 1px solid $off-white;
+  font-size: 1.6rem;
+  // border-radius: 8px;
 }
 
 .table th,
 .table td {
+  width: 25%;
   padding: 0.6rem 0.8rem;
   text-align: left;
+
+  button.btn.btn-delete {
+    background-color: none;
+  }
 }
 
 .table th {
-  background: $table;
-  border-radius: 8px;
+  // background: $table;
+  // border-radius: 8px;
 }
 
 .btn-delete {

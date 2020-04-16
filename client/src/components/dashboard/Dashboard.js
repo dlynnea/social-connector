@@ -14,20 +14,22 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
     }, [getUserProfile]);
 
     return loading && profile === null ? <Wheel /> : <Fragment>
-        <h1 className="lg primary-txt">{ user && user.name }'s Dashboard</h1>
+        <div className="dashboard-header">
+        <h1 className="lg primary-txt header">Home</h1>
+        <h2 className="primary-txt">{user && user.name}'s Dashboard</h2>
+        </div>
         {profile !== null 
-        ? (<Fragment>
+        ? (<div className="dashboard">
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
 
             <div className="delete-account my-3">
             <Links />
-            
                 <button onClick={() => deleteProfile()} className="btn btn-danger">
                     Delete Account
                 </button>
             </div>
-        </Fragment>) 
+        </div>) 
         : (
         <Fragment>
             <p>Click below to set up your profile</p>

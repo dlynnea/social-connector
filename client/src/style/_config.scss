@@ -17,12 +17,12 @@ $success: #2d8a76;
 
 
 /* current colors */
-$lead: rgb(46, 55, 58);
+// $lead: rgb(46, 55, 58);
 // $primary-color: rgba(6, 82, 96, 0.9);
-$dark-color: rgb(43, 99, 116);
+// $dark-color: rgb(43, 99, 116);
 // $geranium: rgb(204, 197, 156);
-$light-coffee: rgb(203, 191, 178);
-$backlight: rgba(160, 195, 199, 0.495);
+// $light-coffee: rgb(203, 191, 178);
+// $backlight: rgba(160, 195, 199, 0.495);
 // $background: rgb(252, 252, 252);
 // $dark-green: rgb(46, 55, 58);
 // $green: rgb(140, 160, 137);
@@ -31,10 +31,12 @@ $backlight: rgba(160, 195, 199, 0.495);
 /*dark colors */
 $lead: rgb(46, 55, 58);
 $primary-color: rgba(128, 165, 172, 0.9);
+$secondary-color: rgba(58, 76, 79, 0.9);
 $dark-color: rgb(24, 39, 43);
 $off-white: rgb(244, 241, 238);
 $backlight: rgba(160, 195, 199, 0.735);
 $background: rgb(52, 55, 57);
+$table: rgb(52, 55, 57);
 $form-placeholder: rgb(130, 125, 125);
 $form-label: rgb(199, 191, 191);
 
@@ -56,7 +58,7 @@ $cream: rgb(203, 191, 178);
 //cactus
 $green: rgb(88, 119, 93);
 $green-blue: rgb(73, 102, 84);
-$table: rgb(125, 172, 153);
+// $table: rgb(125, 172, 153);
 // $table: rgb(98, 144, 125);
 // $table: rgb(125, 172, 153);
 // $table: rgb(125, 172, 153);
@@ -158,3 +160,35 @@ $table: rgb(125, 172, 153);
 .my-3 {
     margin: 3rem 0;
 }
+
+//text
+
+.xl {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .lg {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $off-white;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .primary-txt {
+    color: $off-white;
+  }
+  
+  .dark-txt {
+    color: $dark-color;
+  }
