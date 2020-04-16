@@ -238,10 +238,10 @@ th {
   border: 1px solid rgb(196, 194, 194);
   transition: background-color 0.3s ease-in;
   
-    &:hover {
-      background-color: $warning;
-      border: $warning;
-    }
+  &:hover {
+    background-color: $warning;
+    border: $warning;
+  }
 }
 
 td i {
@@ -275,6 +275,7 @@ td i {
   padding: 0.4rem;
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
+  background: none;
 }
 
 .form select {
@@ -806,8 +807,6 @@ select.form-element-field {
 .form-btn-cancel:hover::before {
   opacity: 1;
 }
-
-
 
 .form-actions {
   position: relative;
