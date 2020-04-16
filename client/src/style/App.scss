@@ -414,11 +414,12 @@ td i {
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   align-items: center;
+  border-radius: 38px;
 
   img {
-    width: 100px;
+    width: 110px;
   }
 
   div:first-child {
@@ -426,11 +427,11 @@ td i {
   }
 
   .comment-count {
-    background: $backlight;
-    color: $primary-color;
+    // background: $off-white;
+    color: $background;
     padding: 0.1rem 0.2rem;
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .post-date {

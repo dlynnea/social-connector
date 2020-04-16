@@ -48,9 +48,17 @@ button {
   
 .form .social-input {
     display: flex;
+    border-bottom: 1px solid #999;
   
     i {
       margin-bottom: 8px;
+      font-size: 1.5rem;
+      margin-right: 0.6rem;
+      margin-left: 0.4rem;
+    }
+
+    .form-element-field {
+        margin-bottom: -1rem;
     }
   
     i.fa-twitter {
@@ -72,36 +80,18 @@ button {
     i.fa-linkedin {
       color: $form-label;
     }
-  }
-
-// edit add profile form
-div.social-input {
-    display: flex;
-    border-bottom: 1px solid #999;
-  
-    i {
-        font-size: 1.5rem;
-        margin-right: 0.6rem;
-        margin-left: 0.4rem;
-    }
-  
-    .form-element-field {
-        margin-bottom: -1rem;
-    }
 }
   
-    .form-element {
-        position: relative;
-        // margin-top: 2.25rem;
-        // margin-bottom: 2.25rem;
-    }
-  
-    div.form-element-bar {
-        position: relative;
-        height: 1px;
-        background: #999;
-        display: block;
-    }
+.form-element {
+    position: relative;
+}
+
+div.form-element-bar {
+    position: relative;
+    height: 1px;
+    background: #999;
+    display: block;
+}
   
 .form-element-bar::after {
     content: "";
@@ -109,7 +99,7 @@ div.social-input {
     bottom: 0;
     left: 0;
     right: 0;
-    background: $dark-color;
+    background: $primary-color;
     height: 2px;
     display: block;
     transform: rotateY(90deg);

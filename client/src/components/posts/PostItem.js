@@ -23,22 +23,22 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, showActions, post: { 
                 {showActions && (
                 <Fragment>
                     <button onClick={() => addLike(_id)} type="button" className="btn btn-light">
-                        <i className="fas fa-thumbs-up"></i>
+                    <i class="far fa-heart"></i>
                         <span>{likes.length > 0 && (
                             <span> {likes.length}</span>
                         )}</span>
                     </button>
-                    <button onClick={() => removeLike(_id)} type="button" className="btn btn-light">
+                    {/* <button onClick={() => removeLike(_id)} type="button" className="btn btn-light">
                         <i className="fas fa-thumbs-down"></i>
-                    </button>
+                    </button> */}
                     <Link to={`/posts/${_id}`} className="btn btn-primary">
-                        Discussion {comments.length > 0 && (
-                            <span className="comment-count">{comments.length}</span>
+                    <i class="far fa-comment"></i> {comments.length > 0 && (
+                            <span className="comment-count"> ({comments.length})</span>
                         )}
                     </Link>
                     {!auth.loading && user === auth.user._id && (
                     <button onClick={(event) => deletePost(_id)} type="button" className="btn btn-danger">
-                        <i className="fas fa-times"></i>
+                        <i class="far fa-trash-alt"></i>
                     </button>
                     )}
                 </Fragment>
