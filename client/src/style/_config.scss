@@ -14,24 +14,42 @@ $warning: #c04b4bd6;
 $success: #2d8a76;
 // $backlight: #f7f1e3;
 // $dustyrose: rgba(168, 98, 98, 0.8);
-$lead: rgb(46, 55, 58);
 
+
+/* current colors */
+$lead: rgb(46, 55, 58);
+// $primary-color: rgba(6, 82, 96, 0.9);
 $dark-color: rgb(43, 99, 116);
 $geranium: rgb(204, 197, 156);
-// $primary-color: rgb(140, 160, 137);
-// $primary-color: rgba(6, 96, 40, 0.9);
-$primary-color: rgba(6, 82, 96, 0.9);
-// $lead: rgb(190, 159, 145);
 $light-coffee: rgb(203, 191, 178);
-// $backlight: rgb(207, 182, 185);
 $backlight: rgba(160, 195, 199, 0.495);
-$light-green: rgb(252, 252, 252);
-//greens
+// $background: rgb(252, 252, 252);
 $dark-green: rgb(46, 55, 58);
-// $light-green: rgb(204, 197, 156);
+$green: rgb(140, 160, 137);
+
+/*dark colors */
+$lead: rgb(46, 55, 58);
+$primary-color: rgba(128, 165, 172, 0.9);
+$dark-color: rgb(49, 81, 89);
+$geranium: rgb(204, 197, 156);
+$light-coffee: rgb(203, 191, 178);
+$backlight: rgba(160, 195, 199, 0.735);
+$background: rgb(38, 37, 37);
+$dark-green: rgb(46, 55, 58);
 $green: rgb(140, 160, 137);
 
 
+
+
+
+
+// $primary-color: rgb(140, 160, 137);
+// $primary-color: rgba(6, 96, 40, 0.9);
+// $lead: rgb(190, 159, 145);
+// $backlight: rgb(207, 182, 185);
+
+//greens
+// $light-green: rgb(204, 197, 156);
 // pinks yellows
 // $yellow: rgb(197, 147, 75);
 // $yellow-2: rgb(202, 146, 77);
@@ -42,61 +60,105 @@ $cream: rgb(203, 191, 178);
 //cactus
 $green: rgb(88, 119, 93);
 $green-blue: rgb(73, 102, 84);
-// $table: rgb(98, 144, 125);
 $table: rgb(125, 172, 153);
+// $table: rgb(98, 144, 125);
 // $table: rgb(125, 172, 153);
 // $table: rgb(125, 172, 153);
 
 
+// bootstrap presets
+
+.btn-primary,
+.bg-primary,
+.alert-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.btn-light,
+.bg-light,
+.alert-light {
+  background-color: $backlight;
+  color: #333;
+}
+
+.btn-dark,
+.bg-dark,
+.alert-dark {
+  background-color: $dark-color;
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.alert-danger {
+  background-color: $warning;
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.alert-success {
+  background-color: $success;
+  color: #fff;
+}
+
+.btn-white,
+.bg-white,
+.alert-white {
+  background-color: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
 
 /* Padding */
 .p {
     padding: 0.5rem;
-  }
-  .p-1 {
+}
+.p-1 {
     padding: 1rem;
-  }
-  .p-2 {
+}
+.p-2 {
     padding: 2rem;
-  }
-  .p-3 {
+}
+.p-3 {
     padding: 3rem;
-  }
-  .py {
+}
+.py {
     padding: 0.5rem 0;
-  }
-  .py-1 {
+}
+.py-1 {
     padding: 1rem 0;
-  }
-  .py-2 {
+}
+.py-2 {
     padding: 2rem 0;
-  }
-  .py-3 {
+}
+.py-3 {
     padding: 3rem 0;
-  }
-  
-  /* Margin */
-  .m {
+}
+
+/* Margin */
+.m {
     margin: 0.5rem;
-  }
-  .m-1 {
+}
+.m-1 {
     margin: 1rem;
-  }
-  .m-2 {
+}
+.m-2 {
     margin: 2rem;
-  }
-  .m-3 {
+}
+.m-3 {
     margin: 3rem;
-  }
-  .my {
+}
+.my {
     margin: 0.5rem 0;
-  }
-  .my-1 {
+}
+.my-1 {
     margin: 1rem 0;
-  }
-  .my-2 {
+}
+.my-2 {
     margin: 2rem 0;
-  }
-  .my-3 {
+}
+.my-3 {
     margin: 3rem 0;
-  }
+}
