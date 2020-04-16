@@ -107,7 +107,8 @@ img {
   height: 100%;
 }
 
-  //text
+
+//text
 
 .xl {
   font-size: 4rem;
@@ -124,6 +125,7 @@ img {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: $off-white;
 }
 
 .text-center {
@@ -131,7 +133,7 @@ img {
 }
 
 .primary-txt {
-  color: $dark-color;
+  color: $off-white;
 }
 
 .dark-txt {
@@ -464,6 +466,7 @@ button {
 
   .repo {
     display: flex;
+    border-radius: 28px;
   }
 
   div:first-child {
