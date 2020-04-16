@@ -8,17 +8,26 @@ const About = ({ profile: { bio, skills, user: { name }}}) => {
             <div className="skills">
                 {skills.map((skill, index) => (
                     <div key={index} className="p-1">
-                         <i class="fas fa-plus-circle"></i> {skill}
+                         <i class="fas fa-angle-right"></i> {skill}
                     </div>
                 ))}
             </div>
             { bio && (
                 <Fragment>
-                    <h2 className="primary-txt">{name.trim().split(' ')[0]}s Bio</h2>
-                    <p>{bio}</p>
                     <div className="line"></div>
+                    <div className="bio">
+                    <h2 className="primary-txt">{name.trim().split(' ')[0]}'s Bio</h2>
+                    <p>{bio}</p>
+                    </div>
                 </Fragment>
             )}
+            <div>
+                <div className="line"></div>
+                <div className="bio">
+                <h2 className="primary-txt">another about item here</h2>
+                <p>Lorem ipsum alksjdlkajsdlkjaljsdlakjsdlkjaldsj</p>
+                </div>
+            </div>
         </div>
     );
 };

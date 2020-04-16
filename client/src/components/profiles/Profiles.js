@@ -17,7 +17,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             : <Fragment>
                 <h1 className="lg primary-txt">Friends</h1>
                 <p className="lead">
-                    Browse and Connect with Friends
+                    Browse and Connect
                 </p>
                 <div className="profiles">
                     {profiles.length > 0 

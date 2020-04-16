@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
 
-$main-font: 'Gotu', sans-serif;
+// $main-font: 'Gotu', sans-serif;
+$main-font: 'Playfair Display', serif;
 
 // $primary-color: #303952;
 // $dark-color: #1f232e;
@@ -44,3 +46,57 @@ $green-blue: rgb(73, 102, 84);
 $table: rgb(125, 172, 153);
 // $table: rgb(125, 172, 153);
 // $table: rgb(125, 172, 153);
+
+
+
+/* Padding */
+.p {
+    padding: 0.5rem;
+  }
+  .p-1 {
+    padding: 1rem;
+  }
+  .p-2 {
+    padding: 2rem;
+  }
+  .p-3 {
+    padding: 3rem;
+  }
+  .py {
+    padding: 0.5rem 0;
+  }
+  .py-1 {
+    padding: 1rem 0;
+  }
+  .py-2 {
+    padding: 2rem 0;
+  }
+  .py-3 {
+    padding: 3rem 0;
+  }
+  
+  /* Margin */
+  .m {
+    margin: 0.5rem;
+  }
+  .m-1 {
+    margin: 1rem;
+  }
+  .m-2 {
+    margin: 2rem;
+  }
+  .m-3 {
+    margin: 3rem;
+  }
+  .my {
+    margin: 0.5rem 0;
+  }
+  .my-1 {
+    margin: 1rem 0;
+  }
+  .my-2 {
+    margin: 2rem 0;
+  }
+  .my-3 {
+    margin: 3rem 0;
+  }

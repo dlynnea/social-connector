@@ -208,57 +208,6 @@ img {
   }
 }
 
-/* Padding */
-.p {
-  padding: 0.5rem;
-}
-.p-1 {
-  padding: 1rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
-.py {
-  padding: 0.5rem 0;
-}
-.py-1 {
-  padding: 1rem 0;
-}
-.py-2 {
-  padding: 2rem 0;
-}
-.py-3 {
-  padding: 3rem 0;
-}
-
-/* Margin */
-.m {
-  margin: 0.5rem;
-}
-.m-1 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.m-3 {
-  margin: 3rem;
-}
-.my {
-  margin: 0.5rem 0;
-}
-.my-1 {
-  margin: 1rem 0;
-}
-.my-2 {
-  margin: 2rem 0;
-}
-.my-3 {
-  margin: 3rem 0;
-}
 
 .delete-account {
   display: flex;
@@ -425,14 +374,39 @@ button {
 
 /* Profile Page */
 
+// .profile {
+//   display: grid;
+//   grid-template-columns: 2fr 4fr 2fr;
+//   align-items: center;
+//   grid-gap: 2rem;
+//   padding: 1rem;
+//   line-height: 1.8;
+//   margin-bottom: 1rem;
+// }
+
+.profiles {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+}
+
+.bio {
+  margin: 1rem;
+}
+
 .profile {
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  align-items: center;
-  grid-gap: 2rem;
   padding: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
+  text-align: center;
+  height: 410px;
+  overflow: scroll;
+  padding-bottom: 1rem;
+
+  a {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
 
 .button-top {
@@ -440,17 +414,6 @@ button {
   flex-direction: row;
   justify-content: space-between;
 }
-
-/* Profile Page */
-// .profile-grid {
-//   display: grid;
-//   grid-template-areas:
-//     'top top'
-//     'about about'
-//     'exp edu'
-//     'github github';
-//   grid-gap: 1rem;
-// }
 
 .profile-grid {
   display: grid;
@@ -474,6 +437,7 @@ button {
   background: url('../img/yellow.jpg') no-repeat center center/cover;
 
   img {
+    grid-area: img;
     width: 250px;
   }
 
