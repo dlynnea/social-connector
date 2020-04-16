@@ -380,13 +380,15 @@ select.form-element-field {
 }
 
 .post-form {
-    // border: 1px dotted $primary-color;
-    // border-top: none;
-    // padding: 2rem;
+
+    .form textarea {
+        padding-top: 2rem;
+        border-bottom: 1px solid #999;
+    }
   
     .post-form-header {
-      background: $off-white;
-      padding: 0.5rem;
+        background: $off-white;
+        padding: 0.5rem;
     }
 
     .form-element-label {
