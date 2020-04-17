@@ -10,6 +10,7 @@ const initialState = {
   location: '',
   status: '',
   skills: '',
+  hobbies: '',
   githubusername: '',
   bio: '',
   avatar: '',
@@ -50,6 +51,7 @@ const ProfileForm = ({
     location,
     status,
     skills,
+    hobbies,
     githubusername,
     bio,
     twitter,
@@ -74,42 +76,6 @@ const ProfileForm = ({
 
       <small>* = required field</small>
       <form className="form" onSubmit={onSubmit}>
-        {/* <div className="form-input">
-          <select name="status" value={status} onChange={onChange}>
-            <option>* Select and Interest or Status</option>
-            <option value="Artist">Artist</option>
-            <option value="Developer">Developer</option>
-            <option value="Engineer">Engineer</option>
-            <option value="Instructor">Instructor</option>
-            <option value="Scientist">Scientist</option>
-            <option value="Potter">Potter</option>
-            <option value="Physicist">Physicist</option>
-            <option value="Student">Student</option>
-            <option value="Other">Other</option>
-          </select>
-          <small className="form-note">
-            Give us an idea of what you do
-          </small>
-        </div> */}
-
-
-        {/* <div className="form-element form-select form-input">
-            <select className="form-element-field" name="status" value={status} onChange={onChange}>
-                <option disabled selected value="" className="form-select-placeholder"></option>
-                <option value="Artist">Artist</option>
-                <option value="Developer">Developer</option>
-                <option value="Engineer">Engineer</option>
-                <option value="Instructor">Instructor</option>
-                <option value="Scientist">Scientist</option>
-                <option value="Potter">Potter</option>
-                <option value="Physicist">Physicist</option>
-                <option value="Student">Student</option>
-                <option value="Other">Other</option>
-            </select>
-            <div className="form-element-bar"></div>
-            <label className="form-element-label">*Select your interest or profession</label>
-        </div> */}
-
         <div className="form-element form-input">
             <input 
               className="form-element-field" 
@@ -170,6 +136,18 @@ const ProfileForm = ({
             />
             <div className="form-element-bar"></div>
             <label className="form-element-label">*Skills</label>
+        </div>
+        <div className="form-element form-input">
+            <input 
+              className="form-element-field" 
+              type="input" 
+              placeholder="Please use comma separated values (eg. Reading,Writing,Hiking)"
+              name="hobbies"
+              value={hobbies}
+              onChange={onChange}
+            />
+            <div className="form-element-bar"></div>
+            <label className="form-element-label">Interests</label>
         </div>
 
         <div className="form-element form-textarea">
