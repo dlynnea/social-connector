@@ -14,7 +14,7 @@ const Posts = ({ getPosts, post: { posts, loading }}) => {
     return loading 
         ? (<Wheel />)
         : (<Fragment>
-            <div className="bg-primary p">
+            <div className="posts-header p">
                 <h1 className="lg primary-txt post-header">Posts</h1>
                 {/* <h3>Write your post here</h3> */}
             </div>

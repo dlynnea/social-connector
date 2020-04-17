@@ -72,7 +72,7 @@ const ProfileForm = ({
   return (
     <Fragment>
       <div className="profile-form">
-      <h1 className="lg primary-txt">Edit Profile</h1>
+      <h1 className="lg primary-txt-form">Edit Profile</h1>
 
       <small>* = required field</small>
       <form className="form" onSubmit={onSubmit}>

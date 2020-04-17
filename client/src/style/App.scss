@@ -16,7 +16,6 @@ html, body, #root, #root > div {
   height: 100%;
   margin: 0;
   padding: 0;
-  margin-top: 0;
 }
 
 body {
@@ -24,7 +23,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: $background;
-  color: #333;
+  // color: #333;
   height: 100%;
 }
 
@@ -41,6 +40,10 @@ img {
     width: 100%;
 }
 
+span {
+  color: $off-white;
+}
+
 
 /* Navbar */
 .navbar {
@@ -49,16 +52,22 @@ img {
   align-items: center;
   padding: 0.7rem 2rem;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   height: 10%;
   top: 0;
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background-color: $navbar;
+  box-shadow: 0px 3px 3px rgba(52, 51, 51, 0.6);
   border-bottom: solid 1px var($primary-color);
-  opacity: 0.9;
 
   ul {
     display: flex;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    color: $primary-color;
   }
 
   a {
@@ -76,13 +85,12 @@ img {
     margin-right: 0.6rem;
   }  
 }
-
   
 // Landing Page
 
 .landing {
   position: relative;
-  background: url('../img/paint.jpg') no-repeat center center/cover;
+  background: url('../img/black.jpg') no-repeat center center/cover;
   height: 100vh;
 }
   
@@ -186,6 +194,16 @@ img {
   margin: 1.5rem 0;
 }
 
+.profile-form p {
+  color: $off-white;
+}
+.profile-form h4 {
+  color: $off-white;
+}
+.profile-form small {
+  color: $off-white;
+}
+
 /* Tables */
 
 .table {
@@ -193,11 +211,16 @@ img {
   color: $dark-color;
   padding: 1rem;
   background-color: $secondary-color;
+
+  .btn-delete {
+    background-color: none;
+  }
 }
 
 th {
   border-bottom: 1px solid $primary-color;
   font-size: 1.6rem;
+  color: $primary-color;
 }
 
 .table th,
@@ -205,15 +228,6 @@ th {
   width: 25%;
   padding: 0.6rem 0.8rem;
   text-align: left;
-
-  button.btn.btn-delete {
-    background-color: none;
-  }
-}
-
-.table th {
-  // background: $table;
-  // border-radius: 8px;
 }
 
 .btn-delete {
@@ -386,6 +400,7 @@ td i {
 
 .post-header {
   padding: 1rem 0 0 2rem;
+  color: $primary-color;
 }
 
 .posts {
@@ -460,6 +475,5 @@ footer {
     margin: 0.6rem;
     color: $off-white;
     text-align: center;
-    // padding-right: 8px;
   }
 }

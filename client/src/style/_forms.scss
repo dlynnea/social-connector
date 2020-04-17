@@ -41,6 +41,12 @@
     margin-bottom: 0.2rem;
     background: none;
 }
+
+.form input[type='date'] {
+    border: none;
+    max-width: 200px;
+    font-size: 1.4rem;
+}
   
 .form select {
     display: block;
@@ -382,7 +388,6 @@ select.form-element-field {
 
     .form textarea {
         padding-top: 2rem;
-        border-bottom: 1px solid #999;
     }
   
     .post-form-header {

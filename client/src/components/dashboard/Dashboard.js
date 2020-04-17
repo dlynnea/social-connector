@@ -16,7 +16,7 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
     return loading && profile === null ? <Wheel /> : <Fragment>
         <div className="dashboard-header">
         <h1 className="lg primary-txt header">Home</h1>
-        <h2 className="primary-txt">{user && user.name}'s Dashboard</h2>
+        <h2 className="secondary-txt">{user && user.name}'s Dashboard</h2>
         </div>
         {profile !== null 
         ? (<div className="dashboard">

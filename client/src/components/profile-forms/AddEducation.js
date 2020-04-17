@@ -29,23 +29,66 @@ const AddEducation = ({ addEducation, history }) => {
     }
 
     return (
-        <Fragment>
-            <h1 className="lg primary-txt">Add Education</h1>
-            <p className="lead">Add any school or training here</p>
+        <div className="profile-form">
+            <h1 className="lg primary-txt-form">Add Education</h1>
             <small>* = required field</small>
             <form className="form" onSubmit={(event) => onSubmit(event)}>
-                <div className="form-input">
-                    <input type="text" placeholder="* School" name="school" value={school} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="School name" 
+                        name="school" 
+                        value={school} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">* School</label>
                 </div>
-                <div className="form-input">
-                    <input type="text" placeholder="* Degree or Certificate" name="degree" value={degree} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="Degree or Certificate" 
+                        name="degree" value={degree} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">* Degree</label>
                 </div>
-                <div className="form-input">
-                    <input type="text" placeholder="Field of Study" name="fieldofstudy" value={fieldofstudy} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="What did you study?" 
+                        name="fieldofstudy" 
+                        value={fieldofstudy} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Field of Study</label>
                 </div>
-                <div className="form-input">
+                <div className="form-element form-input">
+                    <textarea 
+                        className="form-element-field" 
+                        placeholder="Share any more details about your education" 
+                        name="description" 
+                        cols="20"
+                        rows="3"
+                        value={description} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Description</label>
+                </div>
+                <div className="form-element form-input">
                     <h4>* From Date:</h4>
-                    <input type="date" name="from" value={from} onChange={(event) => onChange(event)}/>
+                    <input 
+                        type="date" 
+                        name="from" 
+                        value={from} 
+                        onChange={(event) => onChange(event)}
+                    />
                 </div>
                 <div className="form-input">
                     <p><input type="checkbox" name="current" checked={current} value={current} 
@@ -59,20 +102,10 @@ const AddEducation = ({ addEducation, history }) => {
                     <input type="date" name="to" value={to} onChange={(event) => onChange(event)} 
                     disabled={toDateDisabled ? 'disabled' : ''}/>
                 </div>
-                <div className="form-input">
-                    <textarea 
-                        placeholder="Description" 
-                        name="description" 
-                        cols="20"
-                        rows="5"
-                        value={description} 
-                        onChange={(event) => onChange(event)}
-                    />
-                </div>
-                <input type="submit" className="btn btn-primary my-1" />
                 <Link className="btn btn-light my-1" to='/dashboard'>Go Back</Link> 
+                <input type="submit" className="btn btn-primary my-1" />
             </form>
-        </Fragment>
+        </div>
     )
 }
 

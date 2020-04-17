@@ -17,15 +17,20 @@ $main-font: 'Raleway', sans-serif;
 
 /* dark theme */
 $lead: rgb(46, 55, 58);
-$primary-color: rgba(128, 165, 172, 0.9);
-$secondary-color: rgba(244, 241, 238, 0.9);
+// $primary-color: rgb(128, 165, 172);
+$primary-color: #3f6d6bf1;
+$navbar: #343535;
+$secondary-color: rgba(249, 247, 245, 0.9);
 $dark-color: rgb(24, 39, 43);
 $off-white: rgb(244, 241, 238);
-$backlight: rgba(160, 195, 199, 0.735);
-$background: rgb(63, 66, 69);
+// $backlight: rgba(160, 195, 199, 0.735);
+$backlight: rgba(135, 179, 175, 0.927);
+// $background: rgb(63, 66, 69);
+$background: #252626;
 $table: rgb(52, 55, 57);
-$form-placeholder: rgb(130, 125, 125);
-$form-label: rgb(199, 191, 191);
+$form-placeholder: rgb(150, 145, 145);
+$form-label: rgb(218, 214, 214);
+$xl-font-color: #3f6d6b;
 $warning: #c04b4bd6;
 $success: #81cebe;
 
@@ -61,8 +66,9 @@ $light-green: rgb(204, 197, 156);
 .btn-dark,
 .bg-dark,
 .alert-dark {
-  background-color: $dark-color;
+  background-color: $primary-color;
   color: #fff;
+//   border: $off-white;
 }
 
 .btn-danger,
@@ -151,6 +157,7 @@ $light-green: rgb(204, 197, 156);
     font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: $xl-font-color;
   }
   
 .lg {
@@ -171,6 +178,15 @@ $light-green: rgb(204, 197, 156);
   
 .primary-txt {
     color: $off-white;
+}
+
+h1.primary-txt-form{
+    border-bottom: 1px dotted $primary-color;
+    color: $off-white;
+}
+
+.secondary-txt {
+    color: $primary-color;
 }
   
 .dark-txt {
