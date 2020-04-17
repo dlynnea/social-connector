@@ -31,43 +31,86 @@ const AddExperience = ({ addExperience, history }) => {
     return (
         <Fragment>
             <h1 className="lg primary-txt">Add Experience</h1>
-            <p className="lead">Add your past positions here</p>
             <small>* = required field</small>
-            <form className="form" onSubmit={(event) => onSubmit(event)}>
-                <div className="form-input">
-                    <input type="text" placeholder="Company" name="company" value={company} onChange={(event) => onChange(event)}/>
+            <form className="form exp-form" onSubmit={(event) => onSubmit(event)}>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="Company Name" 
+                        name="company" 
+                        value={company} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">* Company</label>
                 </div>
-                <div className="form-input">
-                    <input type="text" placeholder="Job Title" name="title" value={title} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="Your position" 
+                        name="title" 
+                        value={title} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">* Job Title</label>
                 </div>
-                <div className="form-input">
-                    <input type="text" placeholder="Location" name="location" value={location} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <input 
+                        className="form-element-field" 
+                        type="text" 
+                        placeholder="Where is it" 
+                        name="location" 
+                        value={location} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Location</label>
                 </div>
-                <div className="form-input">
-                    <h4>From Date:</h4>
-                    <input type="date" name="from" value={from} onChange={(event) => onChange(event)}/>
+                <div className="form-element form-input">
+                    <h4>* From Date:</h4>
+                    <input 
+                        type="date" 
+                        name="from" 
+                        value={from} 
+                        onChange={(event) => onChange(event)}
+                    />
                 </div>
-                <div className="form-input">
-                    <p><input type="checkbox" name="current" checked={current} value={current} 
-                    onChange={(event) => {
+                <div className="form-element form-input">
+                    <p><input 
+                        type="checkbox" 
+                        name="current" 
+                        checked={current} 
+                        value={current} 
+                        onChange={(event) => {
                         setFormData({ ...formData, current: !current })
                         toggleDisabled(!toDateDisabled)}}
-                    /> Current</p>
+                    /> * Current</p>
                 </div>
-                <div className="form-input">
-                    <h4>To Date:</h4>
-                    <input type="date" name="to" value={to} onChange={(event) => onChange(event)} 
-                    disabled={toDateDisabled ? 'disabled' : ''}/>
+                <div className="form-element form-input">
+                    <h4>* To Date:</h4>
+                    <input 
+                        type="date" 
+                        name="to" 
+                        value={to} 
+                        onChange={(event) => onChange(event)} 
+                        disabled={toDateDisabled ? 'disabled' : ''}
+                    />
                 </div>
-                <div className="form-input">
+                <div className="form-element form-input">
                     <textarea 
-                    placeholder="Description" 
-                    name="description" 
-                    value={description} 
-                    onChange={(event) => onChange(event)}
-                    cols="20"
-                    rows="5"
+                        className="form-element-field" 
+                        placeholder="A short description of what you do.." 
+                        name="description" 
+                        value={description} 
+                        onChange={(event) => onChange(event)}
+                        cols="20"
+                        rows="5"
                     ></textarea>
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Description</label>
                 </div>
                 <input type="submit" className="btn btn-primary" />
                 <Link className="btn btn-light my-1" to='/dashboard'>Go Back</Link> 
