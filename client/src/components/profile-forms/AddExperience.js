@@ -29,8 +29,8 @@ const AddExperience = ({ addExperience, history }) => {
     }
 
     return (
-        <Fragment>
-            <h1 className="lg primary-txt">Add Experience</h1>
+        <div className="profile-form">
+            <h1 className="lg primary-txt-form">Add Experience</h1>
             <small>* = required field</small>
             <form className="form exp-form" onSubmit={(event) => onSubmit(event)}>
                 <div className="form-element form-input">
@@ -70,6 +70,19 @@ const AddExperience = ({ addExperience, history }) => {
                     <label className="form-element-label">Location</label>
                 </div>
                 <div className="form-element form-input">
+                    <textarea 
+                        className="form-element-field" 
+                        placeholder="A short description of what you do.." 
+                        name="description" 
+                        value={description} 
+                        onChange={(event) => onChange(event)}
+                        cols="20"
+                        rows="3"
+                    ></textarea>
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Description</label>
+                </div>
+                <div className="form-element form-input">
                     <h4>* From Date:</h4>
                     <input 
                         type="date" 
@@ -99,23 +112,10 @@ const AddExperience = ({ addExperience, history }) => {
                         disabled={toDateDisabled ? 'disabled' : ''}
                     />
                 </div>
-                <div className="form-element form-input">
-                    <textarea 
-                        className="form-element-field" 
-                        placeholder="A short description of what you do.." 
-                        name="description" 
-                        value={description} 
-                        onChange={(event) => onChange(event)}
-                        cols="20"
-                        rows="5"
-                    ></textarea>
-                    <div className="form-element-bar"></div>
-                    <label className="form-element-label">Description</label>
-                </div>
-                <input type="submit" className="btn btn-primary" />
                 <Link className="btn btn-light my-1" to='/dashboard'>Go Back</Link> 
+                <input type="submit" className="btn btn-primary" />
             </form>
-        </Fragment>
+        </div>
     )
 }
 

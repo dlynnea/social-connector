@@ -29,10 +29,10 @@ const AddEducation = ({ addEducation, history }) => {
     }
 
     return (
-        <Fragment>
-            <h1 className="lg primary-txt">Add Education</h1>
+        <div className="profile-form">
+            <h1 className="lg primary-txt-form">Add Education</h1>
             <small>* = required field</small>
-            <form className="form edu-form" onSubmit={(event) => onSubmit(event)}>
+            <form className="form" onSubmit={(event) => onSubmit(event)}>
                 <div className="form-element form-input">
                     <input 
                         className="form-element-field" 
@@ -69,6 +69,19 @@ const AddEducation = ({ addEducation, history }) => {
                     <label className="form-element-label">Field of Study</label>
                 </div>
                 <div className="form-element form-input">
+                    <textarea 
+                        className="form-element-field" 
+                        placeholder="Share any more details about your education" 
+                        name="description" 
+                        cols="20"
+                        rows="3"
+                        value={description} 
+                        onChange={(event) => onChange(event)}
+                    />
+                    <div className="form-element-bar"></div>
+                    <label className="form-element-label">Description</label>
+                </div>
+                <div className="form-element form-input">
                     <h4>* From Date:</h4>
                     <input 
                         type="date" 
@@ -89,23 +102,10 @@ const AddEducation = ({ addEducation, history }) => {
                     <input type="date" name="to" value={to} onChange={(event) => onChange(event)} 
                     disabled={toDateDisabled ? 'disabled' : ''}/>
                 </div>
-                <div className="form-element form-input">
-                    <textarea 
-                        className="form-element-field" 
-                        placeholder="Share any more details about your education" 
-                        name="description" 
-                        cols="20"
-                        rows="5"
-                        value={description} 
-                        onChange={(event) => onChange(event)}
-                    />
-                    <div className="form-element-bar"></div>
-                    <label className="form-element-label">Description</label>
-                </div>
-                <input type="submit" className="btn btn-primary my-1" />
                 <Link className="btn btn-light my-1" to='/dashboard'>Go Back</Link> 
+                <input type="submit" className="btn btn-primary my-1" />
             </form>
-        </Fragment>
+        </div>
     )
 }
 
