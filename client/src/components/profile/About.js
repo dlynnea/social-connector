@@ -8,7 +8,7 @@ const About = ({ profile: { bio, skills, user: { name }}}) => {
             <div className="skills">
                 {skills.map((skill, index) => (
                     <div key={index} className="p-1">
-                         <i class="fas fa-angle-right"></i> {skill}
+                        {skill}
                     </div>
                 ))}
             </div>
@@ -24,8 +24,8 @@ const About = ({ profile: { bio, skills, user: { name }}}) => {
             <div>
                 <div className="line"></div>
                 <div className="bio">
-                <h2 className="primary-txt">another about item here</h2>
-                <p>Lorem ipsum alksjdlkajsdlkjaljsdlakjsdlkjaldsj</p>
+                <h2 className="primary-txt">Interests</h2>
+                <p>Reading, Exploring the outdoors, Writing Blogs, Cooking, Exercising</p>
                 </div>
             </div>
         </div>

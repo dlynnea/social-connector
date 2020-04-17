@@ -32,7 +32,7 @@ const Dashboard = ({ getUserProfile, deleteProfile, auth: { user }, profile: {pr
         </div>) 
         : (
         <Fragment>
-            <p>Click below to set up your profile</p>
+            <p className="primary-txt">Click below to set up your profile</p>
             <Link to='/create-profile'className="btn btn-primary my-1">
                 Create Profile
             </Link>
