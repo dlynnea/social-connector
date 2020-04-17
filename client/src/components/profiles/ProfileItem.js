@@ -7,7 +7,8 @@ const ProfileItem = ({ profile: {
     status,
     company,
     location,
-    skills
+    skills,
+    hobbies
     } 
 }) => {
     return (

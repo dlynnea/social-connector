@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const About = ({ profile: { bio, skills, user: { name }}}) => {
+const About = ({ profile: { bio, skills, hobbies, user: { name }}}) => {
     return (
         <div className="profile-about bg-light p-2">
             <h2 className="primary-txt">Skills</h2>
@@ -12,6 +12,17 @@ const About = ({ profile: { bio, skills, user: { name }}}) => {
                     </div>
                 ))}
             </div>
+            <div>
+            <div className="line"></div>
+                <h2 className="primary-txt">Interests</h2>
+                    <div className="skills">
+                        {hobbies.map((hobby, index) => (
+                            <div key={index} className="p-1">
+                            {hobby}
+                            </div>
+                        ))}
+                    </div>
+            </div>
             { bio && (
                 <Fragment>
                     <div className="line"></div>
@@ -21,13 +32,6 @@ const About = ({ profile: { bio, skills, user: { name }}}) => {
                     </div>
                 </Fragment>
             )}
-            <div>
-                <div className="line"></div>
-                <div className="bio">
-                <h2 className="primary-txt">Interests</h2>
-                <p>Reading, Exploring the outdoors, Writing Blogs, Cooking, Exercising</p>
-                </div>
-            </div>
         </div>
     );
 };
