@@ -184,12 +184,16 @@ img {
   margin: 1.5rem 0;
 }
 
-small, p, h4 {
+.edu-form, .exp-form {
+  margin: 0 1rem;
+}
+
+.edu-form p, small, h4 {
   color: $off-white;
 }
 
-.edu-form, .exp-form {
-  margin: 0 1rem;
+.exp-form p, small, h4 {
+  color: $off-white;
 }
 
 /* Tables */
