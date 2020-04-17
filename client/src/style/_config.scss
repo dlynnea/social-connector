@@ -2,22 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
 
-// $main-font: 'Gotu', sans-serif;
 $main-font: 'Raleway', sans-serif;
-// $main-font: 'Playfair Display', serif;
 
-// $primary-color: #303952;
-// $dark-color: #1f232e;
-$summer-time: #f5cd79;
-// $geranium: #cf6a87;
-// $lead: #596275;
-$warning: #c04b4bd6;
-$success: #2d8a76;
-// $backlight: #f7f1e3;
-// $dustyrose: rgba(168, 98, 98, 0.8);
-
-
-/* current colors */
+/* light theme */
 // $lead: rgb(46, 55, 58);
 // $primary-color: rgba(6, 82, 96, 0.9);
 // $dark-color: rgb(43, 99, 116);
@@ -28,8 +15,7 @@ $success: #2d8a76;
 // $dark-green: rgb(46, 55, 58);
 // $green: rgb(140, 160, 137);
 
-
-/*dark colors */
+/* dark theme */
 $lead: rgb(46, 55, 58);
 $primary-color: rgba(128, 165, 172, 0.9);
 $secondary-color: rgba(244, 241, 238, 0.9);
@@ -40,32 +26,23 @@ $background: rgb(63, 66, 69);
 $table: rgb(52, 55, 57);
 $form-placeholder: rgb(130, 125, 125);
 $form-label: rgb(199, 191, 191);
+$warning: #c04b4bd6;
+$success: #2d8a76;
 
-
-// $primary-color: rgb(140, 160, 137);
-// $primary-color: rgba(6, 96, 40, 0.9);
-// $lead: rgb(190, 159, 145);
-// $backlight: rgb(207, 182, 185);
-
-//greens
-// $light-green: rgb(204, 197, 156);
-// pinks yellows
-// $yellow: rgb(197, 147, 75);
-// $yellow-2: rgb(202, 146, 77);
+/* pinks yellows */
+$yellow: rgb(197, 147, 75);
+$yellow-2: rgb(202, 146, 77);
 $rose: rgb(183, 133, 110);
 $cream: rgb(203, 191, 178);
-// $lightrose: rgb(207, 182, 185);
+$lightrose: rgb(207, 182, 185);
+$summer-time: #f5cd79;
 
-//cactus
+/* cactus theme */
 $green: rgb(88, 119, 93);
 $green-blue: rgb(73, 102, 84);
-// $table: rgb(125, 172, 153);
-// $table: rgb(98, 144, 125);
-// $table: rgb(125, 172, 153);
-// $table: rgb(125, 172, 153);
+$light-green: rgb(204, 197, 156);
 
-
-// bootstrap presets
+/* bootstrap presets */
 
 .btn-primary,
 .bg-primary,
@@ -168,7 +145,7 @@ $green-blue: rgb(73, 102, 84);
     margin: 1rem 3rem;
 }
 
-//text
+/* bootstrap texts */
 
 .xl {
     font-size: 4rem;
@@ -176,26 +153,26 @@ $green-blue: rgb(73, 102, 84);
     margin-bottom: 1rem;
   }
   
-  .lg {
+.lg {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1rem;
-  }
+}
   
-  .lead {
+.lead {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: $off-white;
-  }
+}
   
-  .text-center {
+.text-center {
     text-align: center;
-  }
+}
   
-  .primary-txt {
+.primary-txt {
     color: $off-white;
-  }
+}
   
-  .dark-txt {
+.dark-txt {
     color: $dark-color;
-  }
+}

@@ -25,7 +25,7 @@ const ProfileItem = ({ profile: {
                     </li>
                 ))}
             </ul>
-            <Link to={`/profile/${_id}`} className="btn btn-primary">View Profile</Link>
+            <Link to={`/profile/${_id}`} className="btn btn-white">View Profile</Link>
         </div>
     )
 }
