@@ -27,7 +27,7 @@ npm start
 
 ### Packages Used
 
-## Client:
+#### Client:
 React
 React-Redux
 Redux-Saga
@@ -36,7 +36,7 @@ Moment
 Axios
 Node-Sass
 
-## Server:
+#### Server:
 Axios
 Bcryptjs
 Express
